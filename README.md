@@ -8,4 +8,4 @@ Type : `https://github.com/tanmay-bhat/NGOMS-weekly-update`
 ------------------------------------------------------------------------------------
 Things to do :
 - week 1: show introduction (home) page
-- week 2: Added about page and created footer
+- week 2: Added **About page** and created Footer
