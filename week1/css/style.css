@@ -7,7 +7,7 @@
 
 body {
 	background: url(../images/bg-body.jpg) repeat;
-	color: #7e868c;
+	color: #a67d35;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	margin: 0;
@@ -122,7 +122,7 @@ p a:hover,
 	margin:0px auto;
 	width:1100px;
 	background: #f1f2f2 url(../images/bg-content.png) repeat-x left bottom;
-	padding: 11px 0 20px;
+	padding: 61px 0 20px;
 }
 #body div.header {
 	background: url(../images/bg-featured.png) repeat-x;
@@ -176,7 +176,7 @@ p a:hover,
 #body div#gallery div.header div h2,
 #body div#gallery div.body div h2,
 #body div#newsblog div.aside div h2 {
-	color: #dc7b14;
+	color: #body div.header div div.section h2,;
 	font-family: 'Conv_BreeSerif-Regular';
 	font-size: 14px;
 	font-weight: normal;
@@ -468,11 +468,11 @@ p a:hover,
 	padding: 0 0 22px;
 }
 #body div#gallery div.header {
-	background: #fff6c2;
-	border: 1px solid #ffe801;
-	height: auto;
+	background: white;
+	border: 1px solid grey;
+	height: 500px;
 	overflow: hidden;
-	padding: 23px 19px;
+	padding: 23px 31px;
 }
 #body div#gallery div.header div {
 	float: left;
@@ -528,14 +528,17 @@ p a:hover,
 	line-height: 24px;
 }
 #body div#gallery div.footer {
-	background: #085180;
-	border: 1px solid #00c6ff;
+	background: #1B5E20;
+	border: 1px solid #1B5E20;
 	color: #00c6ff;
 	margin: 35px 0 0;
+
 	overflow: hidden;
 	padding: 0 19px;
+	top: 400px;
 }
 #body div#gallery div.footer p {
+		padding-left: 50%;
 	color: #74c4d4;
 	float: left;
 	font-family: 'Conv_BreeSerif-Regular';
@@ -546,7 +549,7 @@ p a:hover,
 #body div#gallery div.footer > a {
 	background: url(../images/bg-lightblue2.png) repeat-x;
 	border-radius: 3px;
-	color: #085180;
+	color: #dc7b14;
 	display: block;
 	float: right;
 	font-family: 'Conv_BreeSerif-Regular';
@@ -557,7 +560,7 @@ p a:hover,
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	text-shadow: 1px 1px 1px #74cddf;
+	text-shadow: 1px 1px 1px;
 	width: 240px;
 }
 #body div#login div:first-child {
