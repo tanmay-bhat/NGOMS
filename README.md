@@ -10,3 +10,4 @@ Things to do :
 - week 1: show introduction (home) page
 - week 2: Added **About page** and created Footer
 - week 3: Added **Gallery page**,**News page** and **Events page**
+- week 4:Added **Donate page**,**Login page**_(this includes forgot password form)_ and **Profile page**.
