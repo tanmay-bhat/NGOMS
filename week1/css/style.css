@@ -470,9 +470,10 @@ p a:hover,
 #body div#gallery div.header {
 	background: white;
 	border: 1px solid grey;
-	height: 500px;
-	overflow: hidden;
+	height: 600px;
 	padding: 23px 31px;
+	overflow: scroll;
+	display: block;
 }
 #body div#gallery div.header div {
 	float: left;

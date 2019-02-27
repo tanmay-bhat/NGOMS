@@ -1,4 +1,40 @@
+<?php
+	include("connection.php");
+	if(isset($_POST['send_msg'])){
+	//for creating unique id with database checked
+	$f = 0;
+	$id = "";
+	while($f != 1){
+		$temp_id = uniqid("MG");
+		//query for checking the uniqueid is exist in table or not
+		$sql = "SELECT * FROM messages WHERE msg_id='".$temp_id."'";
+		$q = mysqli_query($con,$sql);
+		if(mysqli_num_rows($q)==0){
+			$id = $temp_id;
+			$f = 1;
+		}
+	}
+		$sql = "INSERT into messages(msg_id,name,email,message)
+		VALUES('".$id."','".$_POST['sender_name']."','".$_POST['sender_email']."','".$_POST['message']."')";
+		$result = mysqli_query($con,$sql);
+		if($result==1){
+			?>
+			<script>
+				alert("Your feedback is sent.");
+			</script>
+			<?php
+		}
+		else{
+			?>
+			<script>
+				alert("Message sending failed..!");
+			</script>
+			<?php
+			echo mysqli_error($con);
+		}
 
+	}
+?>
 <body style="margin-left: 300px;">
 <div id="footer" class="footer">
 	<div>
@@ -37,7 +73,7 @@
 					<b>Email</b>
 					<span>:</span>
 					<p>
-						<a href="" class="email" target="_blank">charis@helpcharis.org</a>
+						<a href="" class="email" target="_blank">charity@charis.org</a>
 					</p>
 				</li>
 				<li>
@@ -53,7 +89,7 @@
 		</div>
 	</div>
 	<p>
-	 Charis &copy; Copyright 2019. All rights reserved.
+		Charis &copy; Copyright 2019. All rights reserved.
 	</p>
 </div>
 </body>

@@ -12,7 +12,7 @@
 		<div>
 			<a href="index.php" id="logo"><img src="https://t3.ftcdn.net/jpg/01/96/73/32/160_F_196733298_kLoT45gDYllKBcJbTiUp1WZIx56XVtz5.jpg" alt="logo"></a>
 			<ul>
-				<li><a href="index.html">Home</a></li>
+				<li><a href="index.php">Home</a></li>
 				<li class="current"><a>About</a></li>
 				<li><a href="gallery.php">gallery</a></li>
 				<li><a href="news.php">News</a></li>

@@ -16,7 +16,7 @@
 			<a href="index.php" id="logo"><img src="https://t3.ftcdn.net/jpg/01/96/73/32/160_F_196733298_kLoT45gDYllKBcJbTiUp1WZIx56XVtz5.jpg" alt="logo"></a>
 			<ul>
 				<li class="current"><a>Home</a></li>
-				<li><a href="about.html">About</a></li>
+				<li><a href="about.php">About</a></li>
 				<li><a href="gallery.php">gallery</a></li>
 				<li><a href="news.php">News</a></li>
 				<li><a href="event.php">Events</a></li>
@@ -50,7 +50,7 @@
 					<h2>Organizing seminars, impact studies, workshops, research study and awareness campaigns on educational policies, statistics, health, legal issues, women and children developmental activities.</h2>
 
 					<p>
-						We Encourage sustainable agricultural development and organic farming.Establishing unity, integrity and communal harmony.Encouraging adult education among rural masses and slum dwellers.Working for persons with disability.
+						We Encourage sustainable agricultural development and organic farming.Establishing unity, integrity and communal harmony.Encouraging adult education among rural masses and slum dwellers.Working for people with disability.
 					</p>
 					<a href="about.php" class="first">Learn More About Us</a>
 					<a href="login.php">Join Us</a>

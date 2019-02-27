@@ -41,10 +41,10 @@ include("./includes/connection.php");
 	</div>
 	<div id="body">
 		<div id="gallery">
-			<div class="header" style="height:600px;">
+			<div class="header" style="height:600px;overflow:scroll">
 
 				<div class="stored">
-					<h2>Added Events</h2><hr>
+					<h2>Added Pics</h2><hr>
 					<?php
 						$sql = "SELECT * FROM media_gallery ORDER BY num DESC";
 						$result = mysqli_query($con,$sql);
@@ -53,9 +53,10 @@ include("./includes/connection.php");
 							if($count<=8){
 							?>
 							<a>
-								<div style="height:100px">
+								<div style="height:200px">
+
+									<img src="<?php echo $rs['image']; ?>"  height="200px" width="500px" style="border:none">
 									<span style="padding-top:27px;padding-right:28px;padding-bottom"><?php echo $rs['caption']; ?></span>
-									<img src="<?php echo $rs['image']; ?>"  height="200px" width="200px" style="padding-top:10px;padding-bottom:100px;border:none;display:flex">
 									<span style="padding-top:10px"><?php echo $rs['description']; ?></span>
 								</div>
 							</a>
@@ -78,4 +79,5 @@ include("./includes/connection.php");
 	</div>
 	<?php	include("./includes/footer.html");	?>
 </body>
+</style>
 </html>

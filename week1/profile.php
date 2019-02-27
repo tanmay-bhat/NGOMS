@@ -7,7 +7,7 @@ include("./includes/connection.php");
 <head>
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" type="image/x-icon" href="images/logo_icon.png" />
-	<title>Events - Charis</title>
+	<title>Profile - Helping Hands</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -19,12 +19,12 @@ include("./includes/connection.php");
 				<li><a href="about.php">About</a></li>
 				<li><a href="gallery.php">gallery</a></li>
 				<li><a href="news.php">News</a></li>
-				<li class="current"><a>Events</a></li>
+				<li><a href="event.php">Events</a></li>
 				<li><a href="donate.php">Donate</a></li>
 				<?php
 					if(isset($_SESSION["user_id"])){
 				?>
-					<li><a href="profile.php">profile</a></li>
+					<li class="current"><a>Profile</a></li>
 				<!--	<li><a href="faq.php">FAQ</a></li> -->
 					<li class="log_btn"><a href="logout.php">Logout</a></li>
 				<?php
@@ -40,46 +40,29 @@ include("./includes/connection.php");
 	</div>
 	<div id="body">
 		<div id="gallery">
-			<div class="header">
-				<div class="aside">
+
+			<div class="body">
 				<?php
-					$sql = "SELECT * FROM event ORDER BY date DESC";
+				  $uid = $_SESSION['user_id'];
+					$sql = "SELECT * FROM user_data WHERE user_id = '$uid'";
 					$result = mysqli_query($con,$sql);
 					$rs = mysqli_fetch_array($result);
 				?>
-					<div>
 
-						<span class="date"><?php echo $rs['date'] ?></span> <a href="event.php" class="figure"><img src="<?php echo $rs['image'] ?>" alt="Image" height="180px" width="180px" style="padding-top:100px;padding-left:100px"></a>
-						<p>
-							<?php echo $rs['event_description']; ?>
-						</p>
-					</div>
-				<?php
-					$count = 1;
-					while($rs = mysqli_fetch_array($result)){
-						if($count <=5){
-				?>
-					<ul style="display:inline;">
-						<li style="overflow:scroll">
-							<h2><a href="event.php"><?php echo $rs['event_name']; ?></a></h2>
-							<span class="date"><?php echo $rs['date']; ?></span>
-							<p>
-								<?php echo $rs['event_description']; ?>
-							</p>
-						</li>
-					</ul>
-				<?php
-						}
-						$count++;
-					}
-				?>
-				</div>
+      	<img src="<?php echo $rs['profile_pic']; ?>" height="200px" width="200px">
+      <br/>
+			<h2><label style="color:orange">FIRSTNAME     :</label><?php echo $rs['first_name'] ?></h2></br>
+			<h2><label style="color:orange">MIDDLENAME    :</label><?php echo $rs['middle_name'] ?></h2></br>
+			<h2><label style="color:orange">LASTNAME      :</label><?php echo $rs['last_name'] ?></h2></br>
+			<h2><label style="color:orange">GENDER        :</label><?php echo $rs['gender'] ?></h2></br>
+			<h2><label style="color:orange">DATE OF BIRTH :</label><?php echo $rs['date_of_birth'] ?></h2></br>
+			<h2><label style="color:orange">ADDRESS       :</label><?php echo $rs['address'] ?></h2></br>
+			<h2><label style="color:orange">MOBILE        :</label><?php echo $rs['mobile'] ?></h2></br>
+			<h2><label style="color:orange">E-MAIL          :</label><?php echo $rs['email'] ?></h2></br>
 			</div>
-
 			<div class="footer">
 				<p>
-					 Be kind and start helping people.
-				</p>
+				Be kind and start helping people.
 				<a href="login.php">Get Involved</a>
 			</div>
 		</div>
