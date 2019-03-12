@@ -101,7 +101,7 @@ p a:hover,
 	background: url() repeat-x;
 }
 #header div ul li.current a {
-	background: url() repeat-x;
+	background: url(../images/bg-menuselected.png) repeat-x;
 	color: #085180;
 	text-shadow: 1px 1px 1px #ffffff;
 }

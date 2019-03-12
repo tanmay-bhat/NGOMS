@@ -58,7 +58,6 @@
 				while($rs = mysqli_fetch_array($result)){
 					?>
 					<a href="add_donation.php?cat=<?php echo $rs['category_id']; ?>&donate=<?php echo $rs['name'];?>"><?php echo $rs['name']; ?></a>
-
 					<?php
 				}
 			?>
