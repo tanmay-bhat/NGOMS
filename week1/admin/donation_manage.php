@@ -7,7 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" type="image/x-icon" href="./images/logo_icon.png" />
-	<title>Admin Panel - Helping Hands</title>
+	<title>Admin Panel - charis</title>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="stylesheet" type="text/css" href="./css/style_form.css">
 	<script src="./js/jquery.min.js"></script>
