@@ -8,7 +8,9 @@ Type : `git clone https://github.com/tanmay-bhat/NGOMS-weekly-update`
 ------------------------------------------------------------------------------------
 Things to do :
 - week 1: show introduction (home) page
-- week 2: Added **About page** and created Footer
-- week 3: Added **Gallery page**,**News page** and **Events page**
-- week 4: Added **Donate page**,**Login page**_(this includes forgot password form)_ and **Profile page**.
-- week 5: Added **Admin login page**,**User data page** and **donation-management-page**.
+- week 2: Add **About page** and created Footer
+- week 3: Add **Gallery page**,**News page** and **Events page**
+- week 4: Add **Donate page**,**Login page**_(this includes forgot password form)_ and **Profile page**.
+- week 5: Add **Admin login page**,**User data page** and **donation-management-page**.
+- week 6: Add **Upload media page**,**Upload news page** and **Ngo-activities-page**.Formatted data in the database.
+
