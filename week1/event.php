@@ -48,10 +48,13 @@ include("./includes/connection.php");
 					$rs = mysqli_fetch_array($result);
 				?>
 					<div >
-
-						<span class="date"><?php echo $rs['date'] ?></span> <a href="event.php" class="figure"><img src="<?php echo $rs['image'] ?>" alt="Image" height="25px" width="25px" style="padding-top:100px;padding-left:100px"></a>
+						<h2><a href="event.php"><?php echo $rs['event_name']; ?></a></h2>
+						<span class="date"><?php echo $rs['date']; ?></span>
+						<span class="date"><?php echo $rs['time']; ?></span>
 						<p>
-							<?php echo $rs['event_description']; ?>
+								<?php echo $rs['event_description']; ?></br>
+							<?php echo $rs['duration']; ?>
+							<img src="<?php echo $rs['image']; ?>" height="150px" width="150px;"/>
 						</p>
 					</div>
 				<?php
@@ -64,8 +67,12 @@ include("./includes/connection.php");
 						<li>
 							<h2><a href="event.php"><?php echo $rs['event_name']; ?></a></h2>
 							<span class="date"><?php echo $rs['date']; ?></span>
+							<span class="date"><?php echo $rs['time']; ?></span>
 							<p>
 								<?php echo $rs['event_description']; ?>
+							</br>
+								<?php echo $rs['duration']; ?>
+
 							</p>
 						</li>
 					</ul>

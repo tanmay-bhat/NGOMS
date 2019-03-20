@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 13, 2019 at 07:02 PM
+-- Generation Time: Mar 20, 2019 at 01:58 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -1096,31 +1096,6 @@ CREATE TABLE `distributions` (
   `counts` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `distributions`
---
-
-INSERT INTO `distributions` (`distribution_id`, `ngo_id`, `category_id`, `counts`) VALUES
-('DS5c4c0dfcc9fb4', 'NS5c4c0debf129c', 'CT7hjkb6h8j65gv', 6),
-('DS5c4c0e04124c2', 'NS5c4c0debf129c', 'CT7hjkb6h8j65gv', 6),
-('DS5c4c0e292b8f5', 'NS5c4c0debf129c', 'CT876hu74t8jhf5', 0),
-('DS5c4c0e2dce6a6', 'NS5c4c0debf129c', 'CT876hu74t8jhf5', 7),
-('DS5c4c0e41166b5', 'NS5c4c0debf129c', 'CT87hjuyhgt6yhg', 5),
-('DS5c558a463460e', 'NS5c4c0debf129c', 'CTujh678jh6543g', 0),
-('DS5c558a4bca59a', 'NS5c4c0debf129c', 'CTujh678jh6543g', 0),
-('DS5c558a52aa585', 'NS5c4c0debf129c', 'CTujh678jh6543g', 5),
-('DS5c863032d9f06', 'NS5c4c0e5cac231', 'CT7hjkb6h8j65gv', 56),
-('DS5c8630387b8c5', 'NS5c4c0debf129c', 'CT7hjkb6h8j65gv', 56),
-('DS5c8630b1b8f04', 'NS5c4c0debf129c', 'CT98kju6yhgfr45', 0),
-('DS5c8630b4007ee', 'NS5c4c0debf129c', 'CT98kju6yhgfr45', 0),
-('DS5c8630b8b281b', 'NS5c4c0debf129c', 'CT98kju6yhgfr45', 25),
-('DS5c86311ae85ac', 'NS5c4c0debf129c', 'CT876hu74t8jhf5', 65),
-('DS5c86314ae664d', 'NS5c4c0debf129c', 'CT876hu74t8jhf5', 65),
-('DS5c86404a704f9', 'NS5c4c0e5cac231', 'CT87hjuyhgt6yhg', 31),
-('DS5c86404f59c6f', 'NS5c4c0debf129c', 'CT87hjuyhgt6yhg', 2),
-('DS5c86417956159', 'NS5c4c0e5cac231', 'CT7hjkb6h8j65gv', 3),
-('DS5c87e89fec0f3', 'NS5c4c0debf129c', 'CT87hjuyhgt6yhg', 2);
-
 -- --------------------------------------------------------
 
 --
@@ -1148,21 +1123,7 @@ CREATE TABLE `donation` (
 
 INSERT INTO `donation` (`donate_id`, `user_id`, `donar_name`, `donar_email`, `city_id`, `address`, `category_id`, `date`, `discription`, `pickup`, `receive_date`, `items`) VALUES
 ('DN57fe28a2b976d', NULL, 'adasd', 'asdas@adas', 312, '				asdasd', 'CT7hjkb6h8j65gv', '2016-10-12', '				asdasdasd', 'M', '2019-01-25', ''),
-('DN57fe428e15dbe', NULL, 'sadasd', 'asdsad@fsda', 404, '	asdasdasd			', 'CT7hjkb6h8j65gv', '2016-10-12', '			asdasd	', 'A', '2019-01-25', ''),
-('DN5c4c08f8c95c5', NULL, 'bhuj', 'fty@gmail.com', 106, '				bhuu', 'CT7hjkb6h8j65gv', '2019-01-26', '	bht			', 'M', '2019-01-26', ''),
-('DN5c4c09d005015', NULL, 'vghu', 'bhu@hmail', 401, '				bhuj', 'CT87hjuyhgt6yhg', '2019-01-26', '	bhhjn			', 'M', '2019-01-26', ''),
-('DN5c4c0ad387117', NULL, 'bh', 'xcvb@gmail.com', 594, '		bhyud		', 'CT7hjkb6h8j65gv', '2019-01-26', '				bhuj', 'M', '2019-01-26', 'bhu'),
-('DN5c4c0c00e956e', NULL, 'bh', 'bmnm@gmail.com', 422, '			nbm,m.,v	', 'CT876hu74t8jhf5', '2019-01-26', '			njik	', 'A', '2019-01-26', 'bhuj'),
-('DN5c4c2514c00c3', NULL, 'vg', 'hhff@gmail.com', 17, '					<label>Address</label>\r\n	fddd			', 'CT876hu74t8jhf5', '2019-01-26', '			ddg	', 'M', '2019-02-02', 'ffg'),
-('DN5c548841e4200', NULL, 'vhjj', 'cfh@nm', 420, '					<label>Address</label>\r\n				', 'CTujh678jh6543g', '2019-02-01', 'bhj', 'M', '2019-02-02', '56'),
-('DN5c7b9af1f40e6', NULL, 'b', 'v@gm.com', 541, '				 m', 'CT876hu74t8jhf5', '2019-03-03', '				vh', 'M', '2019-03-11', 'vghj'),
-('DN5c7b9c1a87ce4', NULL, 'bh', 'pp@gmail.com', 509, '			 n	', 'CT876hu74t8jhf5', '2019-03-03', 'vv', 'M', '2019-03-11', 'cv'),
-('DN5c7ba216af643', NULL, 'nj', 'nj@gmail.com', 422, '		nj		', 'CT876hu74t8jhf5', '2019-03-03', '				bhjs', 'M', '2019-03-11', '4'),
-('DN5c8627b5a8ac8', NULL, 'cv', 'bh@k.com', 397, '				', 'CT876hu74t8jhf5', '2019-03-11', '				xx', 'M', '2019-03-11', ' 78'),
-('DN5c862fff6b5c7', NULL, 'pp', 'pp@gmail.com', 446, '				', 'CT7hjkb6h8j65gv', '2019-03-11', '				yuiu', 'M', '2019-03-11', '56'),
-('DN5c8630a2ce1ca', NULL, 'n', 'pp@gmail.com', 106, '				', 'CT98kju6yhgfr45', '2019-03-11', '				', 'M', '2019-03-11', '30'),
-('DN5c8630f50ab5c', NULL, 'p', 'pp@gmail.com', 106, '				', 'CT876hu74t8jhf5', '2019-03-11', '				', 'M', '2019-03-11', '3'),
-('DN5c863139e420a', NULL, '67', 'pp@gmail.com', 106, '				', 'CT876hu74t8jhf5', '2019-03-11', '				', 'M', '2019-03-11', '65');
+('DN57fe428e15dbe', NULL, 'sadasd', 'asdsad@fsda', 404, '	asdasdasd			', 'CT7hjkb6h8j65gv', '2016-10-12', '			asdasd	', 'A', '2019-01-25', '');
 
 -- --------------------------------------------------------
 
@@ -1187,15 +1148,9 @@ CREATE TABLE `event` (
 --
 
 INSERT INTO `event` (`event_id`, `event_name`, `event_description`, `date`, `time`, `address`, `city_id`, `duration`, `image`) VALUES
-('ET57fafde00f3cb', 'Help Elders', 'We are organizing an event which will be helpful to elders, we distribute some basic requirements to them. Join us in spreading joy.', '2016-09-10', '10:30:00', 'Vastrapur station road, Vejalpur', 306, '4hr', ''),
-('ET57fb039adedd1', 'Save Children', 'We are organizing an event which will be helpful to children, we distribute some basic requirements to the children like toys, books, food-packets. Join us and enjoy the pleasure of sharing.', '2016-09-30', '10:00:00', 'Om Shanti School', 341, '6hr', './event_uploads/ET57fb039adedd1.jpg'),
-('ET5c4b4c4800c9f', 'ihjh', 'jhkjh', '1996-06-01', '00:00:00', 'dlsnclkjsklc', 215, '1 hr', './event_uploads/ET5c4b4c4800c9f.png'),
-('ET5c4be4880333d', 'bhjjs', '', '2019-12-01', '00:59:00', '', 396, 'bh', './event_uploads/ET5c4be4880333d.png'),
-('ET5c4c709bd2e90', 'event1', 'event1', '2019-12-01', '15:05:00', 'event1', 120, '2hours', './event_uploads/ET5c4c709bd2e90.YTS.TO.jpg'),
-('ET5c4c7dfbe848d', 'demo1', 'bhu', '2019-12-01', '03:04:00', 'demo1', 320, '2', './event_uploads/ET5c4c7dfbe848d.YTS.TO.jpg'),
-('ET5c4c7e65e54c8', 'event1', 'event1', '1999-04-05', '16:04:00', 'rt', 106, '3g', './event_uploads/ET5c4c7e65e54c8.YTS.TO.jpg'),
-('ET5c4c93990df0f', 'event2', 'event2', '2019-01-01', '03:04:00', 'event2', 595, '4hours', './event_uploads/ET5c4c93990df0f.png'),
-('ET5c4d8ed789a4e', 'event3', 'event3', '2019-12-01', '16:05:00', 'pp', 509, '4hours', './event_uploads/ET5c4d8ed789a4e.png');
+('ET57fafde00f3cb', 'Help Elders', 'We are organizing an event which will be helpful to elders. We distribute blankets,medicines and other things. Join us in spreading joy.', '2016-09-10', '10:30:00', 'Vastrapur station road, Vejalpur', 306, '4hours', ''),
+('ET57fb039adedd1', 'Help Children', 'We are organizing an event to spread joy among specially ables children, we distribute toys, books, food-packets,chocolates and other stuffs. Join us and enjoy the pleasure of sharing.', '2016-09-30', '10:00:00', 'Om Shanti School', 341, '6hours', './event_uploads/ET57fb039adedd1.jpg'),
+('ET5c922fb3b5a1f', 'Blood donation', 'Blood donation camp is held by Smile ngo.', '2019-03-06', '11:00:00', 'Hyderabad', 29, '5hours', './event_uploads/ET5c922fb3b5a1f.jpg');
 
 -- --------------------------------------------------------
 
@@ -1244,18 +1199,9 @@ CREATE TABLE `media_gallery` (
 --
 
 INSERT INTO `media_gallery` (`num`, `media_id`, `caption`, `image`, `description`, `view`) VALUES
-(1, 'MG5c4c3b529aa10', 'demo2', './gallery_uploads/MG5c4c3b529aa10.YTS.TO.jpg', 'demo2', NULL),
-(2, 'MG57fb2d94e9cce', 'Food Distribution', './gallery_uploads/MG57fb2d94e9cce.jpg', 'NGO works for distributing foods with people', NULL),
-(3, 'MG57fb2dad3a178', 'Children', './gallery_uploads/MG57fb2dad3a178.jpg', '', NULL),
-(4, 'MG57fb2ddd8cdd0', 'Children Education Support', './gallery_uploads/MG57fb2ddd8cdd0.jpg', 'We supports children for there educations', NULL),
-(5, 'MG5c4b4bc9c089d', 'hhdhdssslkcjlskjlskdjlkjsd', './gallery_uploads/MG5c4b4bc9c089d.png', 'sdclsjclkjslkcjsdljclsdjlsjdfl', NULL),
-(6, 'MG5c4be43fe9794', 'yu', './gallery_uploads/MG5c4be43fe9794.png', '', NULL),
-(7, 'MG5c4be6b170644', 'bh', './gallery_uploads/MG5c4be6b170644.png', 'vg', NULL),
-(8, 'MG5c4c25b1625be', 'demo', './gallery_uploads/MG5c4c25b1625be.png', 'demo', NULL),
-(9, 'MG5c4c8af773274', 'demo5', './gallery_uploads/MG5c4c8af773274.YTS.TO.jpg', 'demo5', NULL),
-(10, 'MG5c4c8b26a143c', 'demo6', './gallery_uploads/MG5c4c8b26a143c.YTS.TO.jpg', 'demo6', NULL),
-(11, 'MG5c4c8ceaba403', 'demo7', './gallery_uploads/MG5c4c8ceaba403.png', 'demo7', NULL),
-(12, 'MG5c769c40eb0a8', 'bh', './gallery_uploads/MG5c769c40eb0a8.png', 'poikabu', NULL);
+(16, 'MG5c922e760989c', 'Help ngo', './gallery_uploads/MG5c922e760989c.jpg', 'Help your ngo.', NULL),
+(17, 'MG5c922ea707b48', 'Green earth', './gallery_uploads/MG5c922ea707b48.jfif', 'Saplings were planted.', NULL),
+(18, 'MG5c922ee1ea3b4', 'Food distribution', './gallery_uploads/MG5c922ee1ea3b4.jpg', 'Nutritious food was distributed to orphan children by Good-will ngo volunteers.', NULL);
 
 -- --------------------------------------------------------
 
@@ -1276,8 +1222,7 @@ CREATE TABLE `messages` (
 --
 
 INSERT INTO `messages` (`msg_id`, `name`, `email`, `message`, `isRead`) VALUES
-('MG5c4b4a0928499', 'hh', 'aa@gmail.com', 'hh', 0),
-('MG5c4be5e5ddca3', 'pp', 'pp@gmail.com', 'bhk', 0);
+('MG5c922c96f2b7c', 'ahuja', 'ahuja@gmail.com', 'Great service', 0);
 
 -- --------------------------------------------------------
 
@@ -1299,16 +1244,12 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`news_id`, `heading`, `description`, `image`, `date`, `time`) VALUES
-('NS57faf72960274', 'Hospitals are now joining with us.', 'For health case we have a great team of doctors from different hospitals. They are supporting who are not able to pay for medicines. They will provides the free checkups with organizing some camp. now donated medicines or other health care donations will directly given to the hospitals for distributed with poor people.', './news_uploads/NS57faf72960274.jpg', '2016-09-12', '15:13:00'),
-('NS57faf8cc1b41d', 'New join of Children Foundation.', 'more and more foundations are now joining with us \"Hope\" is a new foundation which is now going to connect with us.', '', '2016-09-12', '14:15:00'),
-('NS57faf8f945331', 'Saved Elders.', 'some elder homes where large number of elders who have insufficient facilities as per the requirement, we just full fill them with donor\'s support.', '', '2016-09-12', '07:18:00'),
-('NS57faf937d0c72', 'Childrens are now happy', 'some organizations where number of children living there, they have insufficient children requirement, we just send them toys, clothes and food peckets', '', '2016-09-10', '12:17:00'),
-('NS57faf96480425', 'Women foundations are joining with us.', '\"NaiSoch\" and \"Savera\" which are women organizations is join us and we start distributing donations to them.', '', '2016-09-08', '12:15:00'),
-('NS5c4be45e97152', 'hjj', '', '', '0000-00-00', '07:06:00'),
-('NS5c4be6cd1dbd8', '', 'vbnm,', './news_uploads/NS5c4be6cd1dbd8.png', '0000-00-00', '00:00:00'),
-('NS5c4c2f1ea53ff', 'bhu', 'bghu', './news_uploads/NS5c4c2f1ea53ff.png', '9999-06-08', '07:09:00'),
-('NS5c4c700de350c', 'demo1', 'demo1', './news_uploads/NS5c4c700de350c.YTS.TO.jpg', '2019-12-08', '04:45:00'),
-('NS5c55a4dd2784e', 'update', 'asd', './news_uploads/NS5c55a4dd2784e.png', '2019-02-06', '06:07:00');
+('NS57faf72960274', 'Many hospitals have joined us.', 'We have a  team of specialized doctors from great hospitals. They offer free medical aids to needy people at camps.The donated medicines and other health care products are also distributed via these camps', './news_uploads/NS57faf72960274.jpg', '2016-09-12', '15:13:00'),
+('NS57faf8cc1b41d', 'Foundation for children development.', '\"Hope\", a new foundation has joined us. ', '', '2016-09-12', '14:15:00'),
+('NS57faf8f945331', 'Helped Elders.', 'Helped elders by providing them with ample amount of foods,medicines and other stuffs.', '', '2016-09-12', '07:18:00'),
+('NS57faf937d0c72', 'Bought a beautiful curve on children\'s face.', ' Sent  toys, clothes and food packets to ngo\'s and held various entertainment programmes to encourage them.', '', '2016-09-10', '12:17:00'),
+('NS57faf96480425', 'Two women\'s foundations have joined us.', '\"NaiSoch\" and \"Savera\" are the women organizations to join us.', '', '2016-09-08', '12:15:00'),
+('NS5c92360187df7', 'Many hospitals have joined us.', 'We have a  team of specialized doctors from great hospitals. They offer free medical aids to needy people at camps.The donated medicines and other health care products are also distributed via these camps', './news_uploads/NS5c92360187df7.jpg', '2019-03-06', '10:00:00');
 
 -- --------------------------------------------------------
 
@@ -1328,8 +1269,8 @@ CREATE TABLE `ngo_data` (
 --
 
 INSERT INTO `ngo_data` (`ngo_id`, `ngo_name`, `address`, `city_id`) VALUES
-('NS5c4c0debf129c', 'op', 'huj', 595),
-('NS5c4c0e5cac231', 'po', 'bhu', 542);
+('NS5c922d2fc635a', 'Good-will Ngo', 'Malleshwaram', 428),
+('NS5c922d757b473', 'Smile Ngo', 'Panajim', 305);
 
 -- --------------------------------------------------------
 
@@ -1407,23 +1348,9 @@ CREATE TABLE `user_data` (
 --
 
 INSERT INTO `user_data` (`user_id`, `first_name`, `middle_name`, `last_name`, `gender`, `date_of_birth`, `address`, `city_Id`, `mobile`, `email`, `password`, `security_que`, `answer`, `profile_pic`) VALUES
-('UR5c4b45fa2fa2b', 'dfrf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'sdff@gmail.co', 'd8578edf8458ce06fbc5bb76a58c5ca4', NULL, NULL, NULL),
-('UR5c4be3b874318', 'poikju', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ghs@gmail.com', '4124bc0a9335c27f086f24ba207a4912', NULL, NULL, NULL),
-('UR5c4d9bd6b2ce8', 'a', 'aa', 'a', 'a', '0000-00-00', 'a', NULL, 79854905, 'a@gmail.com', 'b21afc54fb48d153c19101658f4a2a48', NULL, NULL, NULL),
-('UR5c508b873566a', 'cc', 'cc', 'cc', 'c', '0000-00-00', 'ccc', NULL, 79854905, 'cc@gmail.com', 'e0323a9039add2978bf5b49550572c7c', NULL, NULL, ''),
-('UR5c508d6caac26', 'dd', 'dd', 'dd', 'd', '0000-00-00', 'dd', NULL, 79854905, 'dd@gmail.com', '1aabac6d068eef6a7bad3fdf50a05cc8', NULL, NULL, '/Profile_pics/UR5c508d6caac26.png'),
-('UR5c5091c7948ad', 'eee', 'ee', 'ee', 'e', '0000-00-00', 'ee', NULL, 1234567890, 'ee@gmail.com', '08a4415e9d594ff960030b921d42b91e', NULL, NULL, '/Profile_pics/UR5c5091c7948ad.png'),
-('UR5c5093f3c01ec', 'ff', 'ff', 'ff', 'f', '0000-00-00', 'fff', NULL, 45, 'dfg@gmail.com', '633de4b0c14ca52ea2432a3c8a5c4c31', NULL, NULL, ''),
-('UR5c51b7fba711a', 'gg', 'gg', 'gg', 'g', '0000-00-00', 'gg', NULL, 1234567890, 'gg@gmail.com', '21ad0bd836b90d08f4cf640b4c298e7c', NULL, NULL, '/Profile_pics/UR5c51b7fba711a.png'),
-('UR5c51bc9f622e3', 'jj', 'jj', 'jj', 'j', '0000-00-00', 'jj', NULL, 1234567890, 'jj@gmail.com', 'bf2bc2545a4a5f5683d9ef3ed0d977e0', NULL, NULL, '/Profile_pics/UR5c51bc9f622e3.png'),
-('UR5c51c0f8e53e3', 'll', 'll', 'll', 'l', '0000-00-00', 'll', NULL, 1, 'll@k', '5b54c0a045f179bcbbbc9abcb8b5cd4c', NULL, NULL, ''),
-('UR5c51c23e45f85', 'qq', 'qq', 'qq', 'q', '0000-00-00', 'qq', NULL, 123, 'sd@gm', '099b3b060154898840f0ebdfb46ec78f', NULL, NULL, 'Profile_pics/UR5c51c23e45f85.png'),
-('UR5c558fda86aee', 'fname', 'mname', 'lname', 'm', '0000-00-00', 'add', NULL, 1234567890, 'bb@gmail.com', '4124bc0a9335c27f086f24ba207a4912', NULL, NULL, 'Profile_pics/UR5c558fda86aee.com.png'),
-('UR5c5592a499689', 'f1', 'm1', 'l1', 'm', '', 'dd', NULL, 1234, 'fgh@bh', '4124bc0a9335c27f086f24ba207a4912', NULL, NULL, 'Profile_pics/UR5c5592a499689.png'),
-('UR5c55932c14799', 'f2', 'm2', 'l2', 'f', '', 'd', NULL, 12, 'aa@gmail.com', '4124bc0a9335c27f086f24ba207a4912', NULL, NULL, 'Profile_pics/UR5c55932c14799.png'),
-('UR5c559a1a4f8a4', 'aaa', 'aaa', 'aaa', 'm', '2019-03-20', 'aaa', NULL, 1234567890, 'aa@hj', '4124bc0a9335c27f086f24ba207a4912', NULL, NULL, 'Profile_pics/UR5c559a1a4f8a4.png'),
-('UR5c55a8bd2a2b9', 'f5', 'f5', 'f5', '', '2019-02-20', 'f5', NULL, 123, 'df@gma', '4124bc0a9335c27f086f24ba207a4912', NULL, NULL, 'Profile_pics/UR5c55a8bd2a2b9.png'),
-('UR5c55ac63641ad', 'f7', 'f7', 'f7', '', '2019-02-20', 'f7', NULL, 12345, 'f7@fg', '4124bc0a9335c27f086f24ba207a4912', NULL, NULL, 'Profile_pics/UR5c55ac63641ad.png');
+('01', 'Monica', 'G', 'Gellar', 'F', '10-01-1990', 'Banglore', 4, 8296740108, 'monica@gmail.com', 'moni123', NULL, NULL, NULL),
+('02', 'Chandler', '', 'Smith', 'M', '1-11-1991', 'Hyderabad', 579, 8796440108, 'chadler@gmail.com', 'chand123', NULL, NULL, NULL),
+('03', 'Sansa', '', 'Stark', 'F', '12-1-1994', 'chennai', 306, 9498440108, 'sansa@gmail.com', 'san89', NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -1534,7 +1461,7 @@ ALTER TABLE `user_data`
 -- AUTO_INCREMENT for table `media_gallery`
 --
 ALTER TABLE `media_gallery`
-  MODIFY `num` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `num` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `state`
