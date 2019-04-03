@@ -9,6 +9,13 @@ include("./includes/connection.php");
 	<link rel="shortcut icon" type="image/x-icon" href="images/logo_icon.png" />
 	<title>Gallery - Charis</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+	.imgcontainer img{
+	  height: 200px;
+	  width: 300px;
+		margin: 20px;
+	}
+	</style>
 </head>
 <body>
 
@@ -49,22 +56,26 @@ include("./includes/connection.php");
 						$sql = "SELECT * FROM media_gallery ORDER BY num DESC";
 						$result = mysqli_query($con,$sql);
 						$count=1;
+						echo "<table border='1' >";
 						while($rs = mysqli_fetch_array($result)){
 							if($count<=8){
 							?>
 							<a>
-								<div style="height:200px">
+								<div>
+                <?php echo "<tr>";
+                echo "<td>" . $rs['caption'] . "</td>";
+                echo "<td>" . $rs['description'] . "</td>";
+								echo "<td>	<img src=".$rs['image']." height:30px width:30px></td>";
+								echo "</tr>";
+									$count++;
+							}
+						}
+							echo "</table>";
 
-									<img src="<?php echo $rs['image']; ?>"  height="200px" width="500px" style="border:none">
-									<span style="padding-top:27px;padding-right:28px;padding-bottom"><?php echo $rs['caption']; ?></span>
-									<span style="padding-top:10px"><?php echo $rs['description']; ?></span>
+							?>
 								</div>
 							</a>
-							<?php
-							}
-							$count++;
-						}
-					?>
+
 				</div>
 
 

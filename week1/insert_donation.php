@@ -25,11 +25,15 @@
 	$item = $_POST['items'];
 	$discription = $_POST["donor_discription"];
 	$pickup = $_POST["pickup"];
-echo $category."<br>";
+  echo $category."<br>";
 	$sql = "INSERT INTO donation(donate_id,donar_name,donar_email,city_id,address,category_id,date,discription,pickup,items)
 	VALUES('".$user_id."','".$name."','".$email."','".$city."','".$address."','".$category."','".$date."','".$discription."','".$pickup."','".$item."')";
+	$sql1 = "UPDATE categories
+SET avaliable = avaliable+'".$item."'
+WHERE category_id= '".$category."'";
 	$q=mysqli_query($con,$sql);
-	if($q == 1){
+	$q1=mysqli_query($con,$sql1);
+	if($q == 1 and $q1 == 1){
 		header("location:./donate.php");
 	}
 	else{

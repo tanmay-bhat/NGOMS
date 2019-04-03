@@ -5,7 +5,7 @@
 	while($f != 1){
 		$temp_id = uniqid("DS");
 		//query for checking the uniqueid is exist in table or not
-		$sql = "SELECT * FROM distributions WHERE distribution_id='".$temp_id."'";	
+		$sql = "SELECT * FROM distributions WHERE distribution_id='".$temp_id."'";
 		$q = mysqli_query($con,$sql);
 		if(mysqli_num_rows($q)==0){
 			$id = $temp_id;
@@ -18,10 +18,24 @@
 	$result = mysqli_query($con,$sql);
 	$rs = mysqli_fetch_array($result);
 	$avl = $rs['avaliable'];
+	if($_GET['donations'] > 0){
 	$avl = $avl - $_GET['donations'];
-	$sql = "UPDATE categories SET avaliable=".$avl." WHERE category_id='".$_GET['cat']."'";
-	if(mysqli_query($con,$sql)){
+  }else{
 		header("location:donation_manage.php?cat=".$_GET['cat']);
+	echo "not in stock";
+	echo '<script language="javascript">';
+echo 'alert("message successfully sent")';
+echo '</script>';
+   }
+   if($avl > 0)
+   {
+	$sql = "UPDATE categories SET avaliable=".$avl." WHERE category_id='".$_GET['cat']."'";
+  }
+	else{
+		echo "not in stock";
+	}
+	if(mysqli_query($con,$sql)){
+		header("location:home.php?");
 	}
 	else{
 		echo mysqli_error($con);

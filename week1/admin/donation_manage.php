@@ -7,11 +7,11 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" type="image/x-icon" href="./images/logo_icon.png" />
-<<<<<<< HEAD
+
 	<title>Admin Panel - Charis</title>
-=======
+
 	<title>Admin Panel - charis</title>
->>>>>>> 510c28348bd952665eb486277551e7b9c9829d74
+
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="stylesheet" type="text/css" href="./css/style_form.css">
 	<script src="./js/jquery.min.js"></script>
@@ -84,8 +84,8 @@
 				<div>
 						<form action="insert_distribution.php" class="user">
 						<label>Items</label>
-							<input type="hidden" value="<?php echo $_GET['cat']; ?>" name="cat">
-							<input type="number" name="donations">
+							<input type="hidden" value="<?php echo $_GET['cat']; ?>" name="cat" min="">
+							<input type="number" name="donations" min="1">
 						<label>Select NGo</label>
 							<select name="ngo_id">
 							<?php
