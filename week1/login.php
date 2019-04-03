@@ -25,6 +25,7 @@
 			if(document.getElementById("mobile").value.length != 10){
 				alert("enter a valid mobile number");
 				return false;
+			}
 		}
 
 		function validateForm(){
