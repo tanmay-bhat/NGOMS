@@ -25,7 +25,7 @@ include("./includes/connection.php");
 					if(isset($_SESSION["user_id"])){
 				?>
 					<li class="current"><a>Profile</a></li>
-				<!--	<li><a href="faq.php">FAQ</a></li> -->
+			
 					<li class="log_btn"><a href="logout.php">Logout</a></li>
 				<?php
 					}
@@ -54,7 +54,6 @@ include("./includes/connection.php");
 			<h2><label style="color:orange">FIRSTNAME     :</label><?php echo $rs['first_name'] ?></h2></br>
 			<h2><label style="color:orange">MIDDLENAME    :</label><?php echo $rs['middle_name'] ?></h2></br>
 			<h2><label style="color:orange">LASTNAME      :</label><?php echo $rs['last_name'] ?></h2></br>
-			<h2><label style="color:orange">GENDER        :</label><?php echo $rs['gender'] ?></h2></br>
 			<h2><label style="color:orange">DATE OF BIRTH :</label><?php echo $rs['date_of_birth'] ?></h2></br>
 			<h2><label style="color:orange">ADDRESS       :</label><?php echo $rs['address'] ?></h2></br>
 			<h2><label style="color:orange">MOBILE        :</label><?php echo $rs['mobile'] ?></h2></br>

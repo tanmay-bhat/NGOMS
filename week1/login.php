@@ -24,15 +24,16 @@
 		function checknumber(){
 			if(document.getElementById("mobile").value.length != 10){
 				alert("enter a valid mobile number");
+
 				return false;
-			}
 		}
+	}
 
 		function validateForm(){
   var validation = true;
   validation &= checkPassword();
   validation &= checknumber();
-  return validation;
+	return validation;
 }
 	</script>
 </head>
@@ -91,19 +92,19 @@
              <input type="radio" name="gender[]" value="female"> Female<br>
              <input type="radio" name="gender[]" value="other"> Other
 						<label>Date of birth</label>
-						<input type="date" name="dat" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>
+						<input type="date" name="dat" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>
 						<label>Address</label>
 						<input type="text" name="address" required>
-						<label>Mobile</label>
-						<input type="number" name="mobile" id="mobile" required>
+						<label>Mobile(10 Digit number)</label>
+						<input type="text" name="mobile" id="mobile" pattern="[0-9]{1}[0-9]{9}" required>
 						<label>Email Address</label>
 						<input type="email" name="email" required>
 						<label>Profile pic</label>
 						<input type="file" name="fileToUpload">
 						<label>Password</label>
 						<input type="password" name="password" id="password" required>
-						<label>Confirm Password</label>
-						<input type="password" name="password" id="password1" required>
+
+
 						<input type="submit" value="Register">
 					</form>
 				</div>
