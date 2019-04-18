@@ -29,9 +29,9 @@
 	display:inline-block;
 }
 .donation_div div a:hover{
-	background: black;
+	background: orange;
 	cursor:pointer;
-	color:#fff;
+	color:green;
 }
 .register_div h3,
 .login_div h3,

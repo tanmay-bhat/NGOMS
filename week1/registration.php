@@ -1,5 +1,4 @@
 <?php
-	include("./includes/session_check.php");
 	include("./includes/connection.php");
 
 	//for creating unique id with database checked
@@ -20,7 +19,6 @@
 	$fname = $_POST["fname"];
 	$mname = $_POST["mname"];
 	$lname = $_POST["lname"];
-	$gender = implode(',',$_POST["radio"]);
 	$date = $_POST["dat"];
 	$result = explode('-',$date);
 	$date = $result[2];
@@ -42,8 +40,8 @@
 		$img = "";
 	}
 
-	$sql = "INSERT INTO user_data(user_id,first_name,middle_name,last_name,gender,date_of_birth,address,mobile,email,password,profile_pic)
-	 VALUES('".$user_id."','".$fname."','".$mname."','".$lname."','".$gender."','".$new."','".$address."','".$mobile."','".$email."','".$password."','".$img."')";
+	$sql = "INSERT INTO user_data(user_id,first_name,middle_name,last_name,date_of_birth,address,mobile,email,password,profile_pic)
+	 VALUES('".$user_id."','".$fname."','".$mname."','".$lname."','".$new."','".$address."','".$mobile."','".$email."','".$password."','".$img."')";
 	$q=mysqli_query($con,$sql);
 	if($q == 1){
 		session_start();
@@ -52,7 +50,13 @@
 		while($rs = mysqli_fetch_array($res)){
 			$_SESSION["user_id"] = $rs["user_id"];
 		}
-		header("location:./index.php");
+		?>
+		<script>
+
+			alert("Successfully logged in.!!");
+			window.location="./index.php";
+		</script>
+		<?php
 	}
 	else{
 		header("location:./error/insert_error.php");

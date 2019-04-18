@@ -21,21 +21,39 @@
 	if($_GET['donations'] > 0){
 	$avl = $avl - $_GET['donations'];
   }else{
-		header("location:donation_manage.php?cat=".$_GET['cat']);
-	echo "not in stock";
-	echo '<script language="javascript">';
-echo 'alert("message successfully sent")';
-echo '</script>';
+		?>
+		<script>
+			window.location="donation_manage.php?cat=".$_GET['cat'];
+			alert("not in stocm,ck.!.,kl!");
+		</script>
+		<?php
    }
-   if($avl > 0)
+   if($avl >= 0)
    {
 	$sql = "UPDATE categories SET avaliable=".$avl." WHERE category_id='".$_GET['cat']."'";
+	?>
+	<script>
+		window.location="home.php?";
+		alert("Successfully sent to the ngo.!!");
+	</script>
+	<?php
   }
 	else{
-		echo "not in stock";
+		?>
+		<script>
+			window.location="donation_manage.php?cat=".$_GET['cat'];
+			alert("not in stock.!.,kl!");
+		</script>
+		<?php
 	}
 	if(mysqli_query($con,$sql)){
-		header("location:home.php?");
+
+		?>
+		<script>
+			window.location="home.php?";
+			alert("not in stock.!!");
+		</script>
+		<?php
 	}
 	else{
 		echo mysqli_error($con);

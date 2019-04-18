@@ -31,7 +31,13 @@
 	$sql = "INSERT INTO media_gallery(media_id,caption,image,description) VALUES('".$m_id."','".$caption."','".$img."','".$description."')";
 	$result = mysqli_query($con,$sql);
 	if($result == 1){
-		header("location:upload_media.php");
+		
+		?>
+		<script>
+			window.location="upload_media.php";
+			alert("Successfully added to the gallery");
+		</script>
+		<?php
 	}
 	else{
 		echo "error..";

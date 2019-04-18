@@ -34,10 +34,18 @@ WHERE category_id= '".$category."'";
 	$q=mysqli_query($con,$sql);
 	$q1=mysqli_query($con,$sql1);
 	if($q == 1 and $q1 == 1){
-		header("location:./donate.php");
+
+		mysqli_close($con);
+		?>
+		<script>
+
+
+		 window.location="includes/thankyou.html";
+		</script>
+		<?php
 	}
 	else{
 		echo "Error".mysqli_error($con);
 	}
-	mysqli_close($con);
+
 ?>

@@ -1,0 +1,45 @@
+body{
+  background-color: white;
+  color:seashell;
+  font-family: Roboto;
+  width: 1250px;
+}
+
+.topnav{
+  border-bottom: 1px solid seashell;
+  position : fixed;
+  top:0;
+  height: 69px;
+  width : 100%;
+  background-color: black;
+  display: flex;
+  padding-left: 10px;
+  z-index: 2;
+}
+a {color:white;}      /* unvisited link */
+a:visited {color:white;}  /* visited link */
+a:hover {color:white;}  /* mouse over link */
+a:active {color:white;}
+ /* selected link */
+h1{
+  padding-left: 530px;
+}
+.misscont{
+  background-image: url('https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-mission-background.jpg');
+  position: relative;
+  top:49px;
+  width: 1200px;
+  height: 700px;
+  left:  70px;
+  right: 70px;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.misscont nav{
+  opacity: 0.6;
+ background-color: black;
+ height: 200px;
+ position: relative;
+ top: 50%;
+ bottom: 50%;
+}

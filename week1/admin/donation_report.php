@@ -56,7 +56,7 @@
 			<select id="show_duration">
 				<option value="">Select Duration First</option>
 			</select>-->
-			<h1>Donations & Distrivution</h1><hr>
+			<h1>Donations & Distribution</h1><hr>
 			<table>
 			<tr>
 				<th>Categoty</th>

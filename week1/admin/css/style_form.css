@@ -8,9 +8,9 @@ hr{
 .login_div{
 	margin:0px 30%;
 }
-.donation_div{
-	width: 900px;
-	margin: 0px auto;
+.donation_div {
+    width: 1200px;
+    margin: 0px auto;
 }
 .donation_div hr{
 	border:2px solid #ddd;

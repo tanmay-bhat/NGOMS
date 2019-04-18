@@ -5,14 +5,15 @@
 ::-google-ms-scrollbar {display:none;}
 ::-khtml-scrollbar {display:none;}
 
+
 body {
-	background: url(../images/bg-body.jpg) repeat;
+	background: aqua;
 	color: #a67d35;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
-	margin: 0;
 	min-width: 940px;
 	padding: 0;
+	margin-left:0px;
 }
 @font-face {
 	font-family: 'Conv_BreeSerif-Regular';
@@ -24,6 +25,7 @@ body {
 	font-weight: normal;
 	font-style: normal;
 }
+
 a {
 	outline: none;
 }
@@ -52,7 +54,7 @@ p a:hover,
 #header {
 	margin: 0px auto;
 	width: 1100px;
-	background: url(../images/bg-header.png) repeat-x;
+
 	height: 169px;
 }
 #header div {

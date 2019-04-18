@@ -1,14 +1,14 @@
 <?php
 	include("./includes/session_check.php");
 	include("../includes/connection.php");
-	
+
 	//for creating unique id with database checked
 	$f = 0;
 	$id = "";
 	while($f != 1){
 		$temp_id = uniqid("NS");
 		//query for checking the uniqueid is exist in table or not
-		$sql = "SELECT * FROM news WHERE news_id='".$temp_id."'";	
+		$sql = "SELECT * FROM news WHERE news_id='".$temp_id."'";
 		$q = mysqli_query($con,$sql);
 		if(mysqli_num_rows($q)==0){
 			$id = $temp_id;
@@ -19,7 +19,7 @@
 	$time = $_POST["news_time"];
 	$heading = $_POST["news_heading"];
 	$description = str_replace("'","\'",$_POST['news_description']);
-	
+
 	$file_name = $_FILES["fileToUpload"]["name"];
 	$tmp_file = $_FILES["fileToUpload"]["tmp_name"];
 	$extension = strchr($file_name,".");
@@ -32,7 +32,13 @@
 	$sql = "INSERT INTO news(news_id,heading,description,image,date,time) VALUES('".$id."','".$heading."','".$description."','".$img."','".$date."','".$time."')";
 	$result = mysqli_query($con,$sql);
 	if($result == 1){
-		header("location:news.php");
+
+		?>
+		<script>
+			window.location="news.php";
+			alert("Successfully added to the news");
+		</script>
+		<?php
 	}
 	else{
 		echo "error..".mysqli_error($con);

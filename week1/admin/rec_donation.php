@@ -6,15 +6,22 @@ include("./includes/connection.php");
 	$result = mysqli_query($con,$sql);
 	$rs = mysqli_fetch_array($result);
 	$avl = $rs['avaliable'];
-	if($avl > 0)
+	if($avl >= 0)
 	{
 	$sql = "UPDATE categories SET avaliable=".$avl." WHERE category_id='".$_GET['cat']."'";
   }
 	else{
-		echo "not in stock";
+		?>
+		<script>
+			window.location="donation_manage.php?cat=".$_GET['cat'];
+			alert("not in stock.!.,kl!");
+		</script>
+		<?php
 	}
 	if(mysqli_query($con,$sql)){
-		header("location:home.php?");
+		header("location:donation_manage.php?cat=".$_GET['cat']);
+		?>
+		<?php
 	}
 
 ?>

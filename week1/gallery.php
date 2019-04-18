@@ -9,14 +9,34 @@ include("./includes/connection.php");
 	<link rel="shortcut icon" type="image/x-icon" href="images/logo_icon.png" />
 	<title>Gallery - Charis</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css">
+	body{
+		background-image: url('http://www.wearethecity.com/wp-content/uploads/2013/12/Fotolia_35984804_Subscription_XL.jpg');
+		background-repeat: repeat;
+		opacity:0.90;
+	}
+  .topnav{
+ 	 border-bottom: 1px solid seashell;
+ 	 display: flex;
+  }
+  #titl{
+ 	 padding-right: 900px;
 
+ 	 color: #1B5E20;
+ 	 text-decoration: yellow overline;
+ 	 font-size: 70px;
+ 	 font-family: Tahoma;
+  }
+  </style>
 </head>
-<body>
+<body style="margin-left:0px">
 
 	<div id="header">
 		<div>
-			<a href="index.php" id="logo"><img src="https://t3.ftcdn.net/jpg/01/96/73/32/160_F_196733298_kLoT45gDYllKBcJbTiUp1WZIx56XVtz5.jpg" alt="logo"></a>
-			<ul>
+			<div class="topnav">
+			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="https://www.vollie.com.au/uploads/organisation_logos/6098/SF-Logo_Use-on-Light-Backgrounds.png" alt="logo" style="padding-top:15px;"></a>
+			<h1 id="titl">CHARIS</h1>
+		</div><ul>
 				<li><a href="index.php">Home</a></li>
 				<li><a href="about.php">About</a></li>
 				<li class="current"><a>gallery</a></li>
@@ -41,8 +61,8 @@ include("./includes/connection.php");
 		</div>
 	</div>
 	<div id="body">
-		<div id="gallery">
-			<div class="header" style="height:600px;overflow:scroll">
+		<div id="gallery" style="padding-top:50px;">
+			<div class="header" style="height:900px;overflow:scroll;">
 
 				<div class="stored">
 					<h2>Added Pics</h2><hr>
@@ -56,7 +76,7 @@ include("./includes/connection.php");
 							<a>
 								<div style="height:200px">
 
-									<img src="<?php echo $rs['image']; ?>"  class="imgstyle" height="200px" width="500px" style="border:none;padding-left:1500px" />
+									<img src="<?php echo $rs['image']; ?>"  class="imgstyle" height="200px" width="500px" style="border:none;padding-left:1500px;" />
 
 								</div>
 							</a>

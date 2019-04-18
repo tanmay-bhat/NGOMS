@@ -19,12 +19,29 @@
 			});
 		});
 	</script>
+	<style type="text/css">
+	.topnav{
+	  border-bottom: 1px solid seashell;
+	  display: flex;
+	}
+	#titl{
+		padding-right: 900px;
+
+		color: #1B5E20;
+		text-decoration: yellow overline;
+		font-size: 70px;
+		font-family: Tahoma;
+	}
+	</style>
 </head>
 <body>
 	<div id="header">
 		<div>
-			<a href="index.php" id="logo"><img src="https://t3.ftcdn.net/jpg/01/96/73/32/160_F_196733298_kLoT45gDYllKBcJbTiUp1WZIx56XVtz5.jpg" alt="logo"></a>
-			<ul>
+			<div class="topnav">
+			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="https://www.vollie.com.au/uploads/organisation_logos/6098/SF-Logo_Use-on-Light-Backgrounds.png" alt="logo" style="padding-top:15px;"></a>
+			<h1 id="titl">CHARIS</h1>
+		</div>
+		<ul>
 				<li><a href="index.php">Home</a></li>
 				<li><a href="about.php">About</a></li>
 				<li><a href="gallery.php">gallery</a></li>
@@ -77,9 +94,9 @@
 					<option value="">Select State First</option>
 				</select>
 				<label>Items</label>
-				<input type="text" name="items">
+				<input type="number" name="items" required>
 				<label>description</label>
-				<textarea name="donor_discription" rows="5">
+				<textarea name="donor_discription" rows="5" required>
 				</textarea>
 				<label>How we collect your donation? </label>
 				<div class="pickup">

@@ -10,12 +10,33 @@
 	<title>Admin Panel - Charis</title>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="stylesheet" type="text/css" href="./css/style_form.css">
+	<style type="text/css">
+	.topnav{
+	  border-bottom: 1px solid seashell;
+	  display: flex;
+	}
+	#titl{
+		padding-right: 900px;
+
+		color: #1B5E20;
+		text-decoration: yellow overline;
+		font-size: 70px;
+		font-family: Tahoma;
+	}
+	body{
+		background-image: url('http://adeleandthepenguin.com/wp-content/uploads/2015/02/dreamstime_m_36300760.jpg');
+		background-repeat: repeat;
+		opacity:0.93;
+	}
+	</style>
 </head>
 <body>
 	<div id="header">
 		<div>
-			<a href="index.php" id="logo"><img src="https://t3.ftcdn.net/jpg/01/96/73/32/160_F_196733298_kLoT45gDYllKBcJbTiUp1WZIx56XVtz5.jpg" alt="logo"></a>
-			<ul>
+			<div class="topnav">
+			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="https://www.vollie.com.au/uploads/organisation_logos/6098/SF-Logo_Use-on-Light-Backgrounds.png" alt="logo" style="padding-top:15px;"></a>
+			<h1 id="titl">CHARIS</h1>
+		</div><ul>
 				<li  class="current"><a href="users.php">users</a></li>
 				<li><a href="home.php">Donations</a></li>
 				<li><a href="upload_media.php">Upload media</a></li>
@@ -49,38 +70,42 @@
   } ?>
   <div class="donation_div acontainer">
   <h3>Users</h3><hr>
-  <table>
+	<div style="padding-right:1200px;">
+  <table border="1">
     <tr>
       <th>Number</th>
        <th>First_name</th>
        <th>Middle_name</th>
 			  <th>last_name</th>
-				<th>Gender</th>
-				<th>Date of Birth</th>
-				<th>Address</th>
-				<th>Mobile</th>
+
+        <th>Mobile</th>
+				<th colspan="2">D___O___B</th>
 				<th>E-mail</th>
+
     </tr>
     <?php
     $sr = 1;
     while($row = mysqli_fetch_array($fetch_query)){?>
       <tr>
         <form action="" method="post" role="form">
+
           <td><?php echo $sr;?></td>
           <td><?php echo $row['first_name'];?></td>
           <td><?php echo $row['middle_name'];?></td>
 					<td><?php echo $row['last_name'];?></td>
-					<td><?php echo $row['gender'];?></td>
-					<td><?php echo $row['date_of_birth'];?></td>
-					<td><?php echo $row['address'];?></td>
+
 					<td><?php echo $row['mobile'];?></td>
+						<td colspan="2"><?php echo $row['date_of_birth'];?></td>
 					<td><?php echo $row['email'];?></td>
-          <td><input type="checkbox" name="keyToDElete" value="<?php echo $row['user_id'];?>" required></td>
-          <td><input type="submit" name="submitDeleteBtn" class="btn btn-info"></td>
+					<td><input type="checkbox" name="keyToDElete" value="<?php echo $row['user_id'];?>" required></td>
+					<td><input type="submit" name="submitDeleteBtn" value="delete" class="btn btn-info"></td>
         </form>
+
       </tr>
     <?php $sr++; } ?>
+
   </table>
+</div>
   </div>
 </div>
 <?php	include("./includes/footer.html");	?>
