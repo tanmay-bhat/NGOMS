@@ -11,7 +11,7 @@ include("./includes/connection.php");
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<style type="text/css">
 	body{
-		background-image: url('http://www.wearethecity.com/wp-content/uploads/2013/12/Fotolia_35984804_Subscription_XL.jpg');
+		background-image: url('./Pictures/background.jpg');
 		background-repeat: repeat;
 		opacity:0.90;
 	}
@@ -33,7 +33,7 @@ include("./includes/connection.php");
 	<div id="header">
 		<div>
 			<div class="topnav">
-			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="https://www.vollie.com.au/uploads/organisation_logos/6098/SF-Logo_Use-on-Light-Backgrounds.png" alt="logo" style="padding-top:15px;"></a>
+			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="./Pictures/logo.png" alt="logo" style="padding-top:15px;"></a>
 			<h1 id="titl">CHARIS</h1>
 		</div>
 		<ul>
@@ -63,7 +63,7 @@ include("./includes/connection.php");
 	<div id="body">
 		<div id="gallery"  style="padding-top:50px;">
 			<div class="header">
-				<div class="aside" >
+				<div class="aside" style="width:900px;" >
 				<?php
 					$sql = "SELECT * FROM event ORDER BY date DESC";
 					$result = mysqli_query($con,$sql);
@@ -76,7 +76,7 @@ include("./includes/connection.php");
 						<p>
 								<?php echo $rs['event_description']; ?></br>
 							<?php echo $rs['duration']; ?>
-							<img src="<?php echo $rs['image']; ?>" height="150px" width="150px;"/>
+
 						</p>
 					</div>
 				<?php

@@ -23,26 +23,28 @@
 	$category = $_POST["cat"];
 	$date = date("Y-m-d");
 	$item = $_POST['items'];
-	$discription = $_POST["donor_discription"];
+	$description = $_POST["donor_description"];
 	$pickup = $_POST["pickup"];
   echo $category."<br>";
-	$sql = "INSERT INTO donation(donate_id,donar_name,donar_email,city_id,address,category_id,date,discription,pickup,items)
-	VALUES('".$user_id."','".$name."','".$email."','".$city."','".$address."','".$category."','".$date."','".$discription."','".$pickup."','".$item."')";
+	$sql = "INSERT INTO donation(donate_id,donar_name,donar_email,city_id,address,category_id,date,description,pickup,items)
+	VALUES('".$user_id."','".$name."','".$email."','".$city."','".$address."','".$category."','".$date."','".$description."','".$pickup."','".$item."')";
 	$sql1 = "UPDATE categories
-SET avaliable = avaliable+'".$item."'
+SET available = available+'".$item."'
 WHERE category_id= '".$category."'";
 	$q=mysqli_query($con,$sql);
 	$q1=mysqli_query($con,$sql1);
 	if($q == 1 and $q1 == 1){
 
 		mysqli_close($con);
-		?>
-		<script>
+?>
+  <script>
+	alert("Thank you for donating..");
+	</script>
+
+<?php
+		 header("location:donate.php");
 
 
-		 window.location="includes/thankyou.html";
-		</script>
-		<?php
 	}
 	else{
 		echo "Error".mysqli_error($con);

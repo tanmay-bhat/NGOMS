@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2019 at 01:58 PM
+-- Generation Time: Apr 28, 2019 at 02:21 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -50,20 +50,20 @@ INSERT INTO `admin` (`admin_Id`, `password`) VALUES
 CREATE TABLE `categories` (
   `category_id` varchar(15) NOT NULL,
   `name` varchar(50) NOT NULL,
-  `avaliable` int(5) NOT NULL
+  `available` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `categories`
 --
 
-INSERT INTO `categories` (`category_id`, `name`, `avaliable`) VALUES
-('CT7hjkb6h8j65gv', 'Toys', 1),
-('CT876hu74t8jhf5', 'Clothes', 0),
-('CT87hjuyhgt6yhg', 'Health', 0),
-('CT9783gt43ft5v6', 'Elders', 0),
-('CT98kju6yhgfr45', 'Education', 0),
-('CTujh678jh6543g', 'Food', 0);
+INSERT INTO `categories` (`category_id`, `name`, `available`) VALUES
+('CT7hjkb6h8j65gv', 'Toys', 33),
+('CT876hu74t8jhf5', 'Clothes', 15),
+('CT87hjuyhgt6yhg', 'Medicines', 13),
+('CT9783gt43ft5v6', 'Stationaries', 37),
+('CT98kju6yhgfr45', 'Food', 95),
+('CTujh678jh6543g', 'Others', 10000);
 
 -- --------------------------------------------------------
 
@@ -1111,7 +1111,7 @@ CREATE TABLE `donation` (
   `address` text NOT NULL,
   `category_id` varchar(15) NOT NULL,
   `date` date NOT NULL,
-  `discription` text NOT NULL,
+  `description` text NOT NULL,
   `pickup` char(1) NOT NULL,
   `receive_date` date DEFAULT NULL,
   `items` varchar(100) NOT NULL
@@ -1121,9 +1121,18 @@ CREATE TABLE `donation` (
 -- Dumping data for table `donation`
 --
 
-INSERT INTO `donation` (`donate_id`, `user_id`, `donar_name`, `donar_email`, `city_id`, `address`, `category_id`, `date`, `discription`, `pickup`, `receive_date`, `items`) VALUES
-('DN57fe28a2b976d', NULL, 'adasd', 'asdas@adas', 312, '				asdasd', 'CT7hjkb6h8j65gv', '2016-10-12', '				asdasdasd', 'M', '2019-01-25', ''),
-('DN57fe428e15dbe', NULL, 'sadasd', 'asdsad@fsda', 404, '	asdasdasd			', 'CT7hjkb6h8j65gv', '2016-10-12', '			asdasd	', 'A', '2019-01-25', '');
+INSERT INTO `donation` (`donate_id`, `user_id`, `donar_name`, `donar_email`, `city_id`, `address`, `category_id`, `date`, `description`, `pickup`, `receive_date`, `items`) VALUES
+('DN5cc591d642a54', NULL, 'Anjali', 'anj@gmail.com', 427, '				Bagalkot', 'CT7hjkb6h8j65gv', '2019-04-28', '				Set of barbie dolls', 'A', NULL, '9'),
+('DN5cc59209882bc', NULL, 'Pinky', 'pinky@gmail.com', 274, '		Delhi		', 'CT7hjkb6h8j65gv', '2019-04-28', '		Set of 2		', 'M', NULL, '6'),
+('DN5cc5928fc3372', NULL, 'Pinky', 'pinky@gmail.com', 485, '				Uttara kannada', 'CT876hu74t8jhf5', '2019-04-28', '		Jeans 		', 'M', NULL, '8'),
+('DN5cc592c8d83d0', NULL, 'Mahati', 'Mahati@gmail.com', 183, '				Kolkatta', 'CT876hu74t8jhf5', '2019-04-28', '				Shirts', 'M', NULL, '7'),
+('DN5cc592fe47f4d', NULL, 'Jai', 'jai@gmail.com', 524, '			Ashoknagar	', 'CT87hjuyhgt6yhg', '2019-04-28', '		Insulin		', 'M', NULL, '5'),
+('DN5cc5932b46985', NULL, 'kiran', 'kiran@gmail.com', 404, '		Adityapur		', 'CT87hjuyhgt6yhg', '2019-04-28', '				Mosquito repellants', 'A', NULL, '8'),
+('DN5cc5935e4a84f', NULL, 'Ajay', 'Ajay@gmail.com', 396, '			Anantnag	', 'CT9783gt43ft5v6', '2019-04-28', '			Books	', 'M', NULL, '19'),
+('DN5cc5938c83e19', NULL, 'Asha', 'Asha@gmail.com', 215, '				Araria', 'CT9783gt43ft5v6', '2019-04-28', '		Pens', 'M', NULL, '18'),
+('DN5cc593bad5656', NULL, 'Chandini', 'chandini@gmail.com', 106, '				Itnagar', 'CT98kju6yhgfr45', '2019-04-28', '		Rice bags		', 'M', NULL, '8'),
+('DN5cc593f4d3a85', NULL, 'Lalitha', 'lalitha@gmail.com', 492, '		Alappuzha		', 'CT98kju6yhgfr45', '2019-04-28', '		FResh vegetables		', 'M', NULL, '87'),
+('DN5cc594352148a', NULL, 'Karthik', 'Karthik@gmail.com', 577, '			Achalpur	', 'CTujh678jh6543g', '2019-04-28', '			10000 rupees money	', 'M', NULL, '10000');
 
 -- --------------------------------------------------------
 
@@ -1148,36 +1157,9 @@ CREATE TABLE `event` (
 --
 
 INSERT INTO `event` (`event_id`, `event_name`, `event_description`, `date`, `time`, `address`, `city_id`, `duration`, `image`) VALUES
-('ET57fafde00f3cb', 'Help Elders', 'We are organizing an event which will be helpful to elders. We distribute blankets,medicines and other things. Join us in spreading joy.', '2016-09-10', '10:30:00', 'Vastrapur station road, Vejalpur', 306, '4hours', ''),
-('ET57fb039adedd1', 'Help Children', 'We are organizing an event to spread joy among specially ables children, we distribute toys, books, food-packets,chocolates and other stuffs. Join us and enjoy the pleasure of sharing.', '2016-09-30', '10:00:00', 'Om Shanti School', 341, '6hours', './event_uploads/ET57fb039adedd1.jpg'),
-('ET5c922fb3b5a1f', 'Blood donation', 'Blood donation camp is held by Smile ngo.', '2019-03-06', '11:00:00', 'Hyderabad', 29, '5hours', './event_uploads/ET5c922fb3b5a1f.jpg');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `event_donation`
---
-
-CREATE TABLE `event_donation` (
-  `donate_id` varchar(15) NOT NULL,
-  `event_id` varchar(15) NOT NULL,
-  `user_id` varchar(15) NOT NULL,
-  `donation` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `faq`
---
-
-CREATE TABLE `faq` (
-  `faq_id` varchar(15) NOT NULL,
-  `user_id` varchar(15) NOT NULL,
-  `question` varchar(500) NOT NULL,
-  `answer` text,
-  `answered` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+('ET5cc59889b1bc2', 'Contribute by donating clothes and toys', 'Toys and clothes will be sent to children of ngos.', '2019-05-29', '07:00:00', 'Banglore', 428, '10hours', './event_uploads/ET5cc59889b1bc2.jfif'),
+('ET5cc599153453e', 'Blood donation camp', 'Blood donation camp is held by Smile ngo.', '2019-05-26', '10:00:00', 'Mumbai', 577, '7hours', './event_uploads/ET5cc599153453e.jpg'),
+('ET5cc599b93420b', 'Promote sapling planting', 'Create awareness by planting saplings .', '2019-05-24', '09:00:00', 'Bambolim', 303, '7hours', './event_uploads/ET5cc599b93420b.jpg');
 
 -- --------------------------------------------------------
 
@@ -1199,9 +1181,9 @@ CREATE TABLE `media_gallery` (
 --
 
 INSERT INTO `media_gallery` (`num`, `media_id`, `caption`, `image`, `description`, `view`) VALUES
-(16, 'MG5c922e760989c', 'Help ngo', './gallery_uploads/MG5c922e760989c.jpg', 'Help your ngo.', NULL),
-(17, 'MG5c922ea707b48', 'Green earth', './gallery_uploads/MG5c922ea707b48.jfif', 'Saplings were planted.', NULL),
-(18, 'MG5c922ee1ea3b4', 'Food distribution', './gallery_uploads/MG5c922ee1ea3b4.jpg', 'Nutritious food was distributed to orphan children by Good-will ngo volunteers.', NULL);
+(28, 'MG5cc594cf122d2', 'Donate blood', './gallery_uploads/MG5cc594cf122d2.jpg', 'Save life by donting blood.', NULL),
+(29, 'MG5cc594efd6715', 'Plant Saplings', './gallery_uploads/MG5cc594efd6715.jfif', 'Help reduce global warming', NULL),
+(30, 'MG5cc5951a41436', 'Food Distribution', './gallery_uploads/MG5cc5951a41436.jpg', 'Food distribution by volunteers', NULL);
 
 -- --------------------------------------------------------
 
@@ -1222,7 +1204,8 @@ CREATE TABLE `messages` (
 --
 
 INSERT INTO `messages` (`msg_id`, `name`, `email`, `message`, `isRead`) VALUES
-('MG5c922c96f2b7c', 'ahuja', 'ahuja@gmail.com', 'Great service', 0);
+('MG5c922c96f2b7c', 'ahuja', 'ahuja@gmail.com', 'Great service', 0),
+('MG5cc59a24e3a55', 'Azim', 'azim@gmail.com', 'Can you please add ngo \"savera\" for further details mail me.', 0);
 
 -- --------------------------------------------------------
 
@@ -1244,12 +1227,10 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`news_id`, `heading`, `description`, `image`, `date`, `time`) VALUES
-('NS57faf72960274', 'Many hospitals have joined us.', 'We have a  team of specialized doctors from great hospitals. They offer free medical aids to needy people at camps.The donated medicines and other health care products are also distributed via these camps', './news_uploads/NS57faf72960274.jpg', '2016-09-12', '15:13:00'),
-('NS57faf8cc1b41d', 'Foundation for children development.', '\"Hope\", a new foundation has joined us. ', '', '2016-09-12', '14:15:00'),
-('NS57faf8f945331', 'Helped Elders.', 'Helped elders by providing them with ample amount of foods,medicines and other stuffs.', '', '2016-09-12', '07:18:00'),
-('NS57faf937d0c72', 'Bought a beautiful curve on children\'s face.', ' Sent  toys, clothes and food packets to ngo\'s and held various entertainment programmes to encourage them.', '', '2016-09-10', '12:17:00'),
-('NS57faf96480425', 'Two women\'s foundations have joined us.', '\"NaiSoch\" and \"Savera\" are the women organizations to join us.', '', '2016-09-08', '12:15:00'),
-('NS5c92360187df7', 'Many hospitals have joined us.', 'We have a  team of specialized doctors from great hospitals. They offer free medical aids to needy people at camps.The donated medicines and other health care products are also distributed via these camps', './news_uploads/NS5c92360187df7.jpg', '2019-03-06', '10:00:00');
+('NS5cc5958bef2c5', 'Medical Aid', 'We have a  team of specialized doctors from great hospitals. They offer free medical aids to needy people at camps.The donated medicines and other health care products are also distributed via these camps\r\n', './news_uploads/NS5cc5958bef2c5.jpg', '2019-04-29', '06:00:00'),
+('NS5cc595eae5d71', 'Hope', '\"Hope\", a new foundation has joined us. ', './news_uploads/NS5cc595eae5d71.jpg', '2019-04-29', '04:00:00'),
+('NS5cc596c2e940f', ' NGO has joined us', 'naisoch has joined us', './news_uploads/NS5cc596c2e940f.png', '2019-04-29', '07:00:00'),
+('NS5cc5976df35e6', 'Women Empowerment', 'Women empowerment program was held in tumkur', './news_uploads/NS5cc5976df35e6.jfif', '2019-04-23', '07:09:00');
 
 -- --------------------------------------------------------
 
@@ -1270,7 +1251,8 @@ CREATE TABLE `ngo_data` (
 
 INSERT INTO `ngo_data` (`ngo_id`, `ngo_name`, `address`, `city_id`) VALUES
 ('NS5c922d2fc635a', 'Good-will Ngo', 'Malleshwaram', 428),
-('NS5c922d757b473', 'Smile Ngo', 'Panajim', 305);
+('NS5c922d757b473', 'Smile Ngo', 'Panajim', 305),
+('NS5cc5741d6191b', 'Soch', 'Banglore', 667);
 
 -- --------------------------------------------------------
 
@@ -1348,9 +1330,12 @@ CREATE TABLE `user_data` (
 --
 
 INSERT INTO `user_data` (`user_id`, `first_name`, `middle_name`, `last_name`, `gender`, `date_of_birth`, `address`, `city_Id`, `mobile`, `email`, `password`, `security_que`, `answer`, `profile_pic`) VALUES
-('01', 'Monica', 'G', 'Gellar', 'F', '10-01-1990', 'Banglore', 4, 8296740108, 'monica@gmail.com', 'moni123', NULL, NULL, NULL),
-('02', 'Chandler', '', 'Smith', 'M', '1-11-1991', 'Hyderabad', 579, 8796440108, 'chadler@gmail.com', 'chand123', NULL, NULL, NULL),
-('03', 'Sansa', '', 'Stark', 'F', '12-1-1994', 'chennai', 306, 9498440108, 'sansa@gmail.com', 'san89', NULL, NULL, NULL);
+('UR5cc58ef422be5', 'prem', 'j', 'kumar', NULL, '2019-04-20', 'Banglore', NULL, 8945678345, 'prem@gmail.com', 'ca8e9df596146578c4b25fe9259e4ef3', NULL, NULL, 'Profile_pics/UR5cc58ef422be5.png'),
+('UR5cc58f577ee0e', 'Joey', '', 'H', NULL, '2002-01-20', 'Chennai', NULL, 9876789758, 'joey@gmail.com', '11b5986d70bd043b854809da3adb1257', NULL, NULL, 'Profile_pics/UR5cc58f577ee0e.png'),
+('UR5cc58fa9bcb7e', 'Monica', '', 'JK', NULL, '1996-04-19', 'Pondicherry', NULL, 9876545678, 'monica@gmail.com', '25f4dc4984928ec08f1a32fe7477de8a', NULL, NULL, 'Profile_pics/UR5cc58fa9bcb7e.jfif'),
+('UR5cc58febac499', 'Ross', '', 'Gellar', NULL, '1991-04-19', 'Mumbai', NULL, 9789656786, 'ross@gmail.com', '62e09c613f194dff87f94d059c7461ae', NULL, NULL, 'Profile_pics/UR5cc58febac499.jpg'),
+('UR5cc59045581da', 'Chandler', '', 'Bing', NULL, '1986-04-19', 'Pune', NULL, 9856739807, 'chandler@gmail.com', 'a84dc5e2f41ce36075073d8d95883cc8', NULL, NULL, 'Profile_pics/UR5cc59045581da.jpg'),
+('UR5cc5911b3f238', 'Vaishnavi', '', 'sehgal', NULL, '1990-04-19', 'Delhi', NULL, 9087654687, 'vaish@gmail.com', '7c77c1720895e0d1bb1caaca57083cfb', NULL, NULL, 'Profile_pics/UR5cc5911b3f238.jpg');
 
 --
 -- Indexes for dumped tables
@@ -1400,21 +1385,6 @@ ALTER TABLE `event`
   ADD KEY `city` (`city_id`);
 
 --
--- Indexes for table `event_donation`
---
-ALTER TABLE `event_donation`
-  ADD PRIMARY KEY (`donate_id`),
-  ADD KEY `groups` (`event_id`),
-  ADD KEY `user_data` (`user_id`);
-
---
--- Indexes for table `faq`
---
-ALTER TABLE `faq`
-  ADD PRIMARY KEY (`faq_id`),
-  ADD KEY `user_id` (`user_id`);
-
---
 -- Indexes for table `media_gallery`
 --
 ALTER TABLE `media_gallery`
@@ -1461,7 +1431,7 @@ ALTER TABLE `user_data`
 -- AUTO_INCREMENT for table `media_gallery`
 --
 ALTER TABLE `media_gallery`
-  MODIFY `num` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `num` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `state`
@@ -1499,20 +1469,6 @@ ALTER TABLE `donation`
 --
 ALTER TABLE `event`
   ADD CONSTRAINT `event_ibfk_1` FOREIGN KEY (`city_id`) REFERENCES `city` (`city_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `event_donation`
---
-ALTER TABLE `event_donation`
-  ADD CONSTRAINT `event_donation_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user_data` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `event_donation_ibfk_3` FOREIGN KEY (`event_id`) REFERENCES `event` (`event_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `event_donation_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `user_data` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `faq`
---
-ALTER TABLE `faq`
-  ADD CONSTRAINT `faq_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user_data` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `ngo_data`

@@ -6,12 +6,12 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link rel="shortcut icon" type="image/x-icon" href="images/logo_icon.png" />
+
 	<title>Charis</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<style type="text/css">
 	body{
-		background-image: url('http://www.wearethecity.com/wp-content/uploads/2013/12/Fotolia_35984804_Subscription_XL.jpg');
+		background-image: url('./Pictures/background.jpg');
 		background-repeat: repeat;
 		opacity:0.90;
 	}
@@ -33,7 +33,7 @@
 	<div id="header">
 		<div>
 			<div class="topnav">
-			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="https://www.vollie.com.au/uploads/organisation_logos/6098/SF-Logo_Use-on-Light-Backgrounds.png" alt="logo" style="padding-top:15px;"></a>
+			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="./Pictures/logo.png" alt="logo" style="padding-top:15px;"></a>
 			<h1 id="titl">CHARIS</h1>
 			<h1>CHARIS</h1>
 		</div>
@@ -59,7 +59,7 @@
 				<?php
 					}
 				?>
-					<a href="./admin/index.php"><img src="https://logos.textgiraffe.com/logos/logo-name/Admin-designstyle-soccer-m.png" alt="admin" height="70px" width="100px" style="padding-top:-1px;padding-right:45px"/></a>
+
 			</ul>
 		</div>
 		</div>
@@ -67,13 +67,13 @@
 	<div id="body">
 		<div class="header">
 			<div>
-				<img src="https://www.timinslaw.com/wp-content/uploads/2017/12/charity.jpg" alt="Image" height="350px" width="350px" style="top:80px">
+				<img src="./Pictures/charity.jpg" alt="Image" height="350px" width="350px" style="top:80px">
 				<div id="tagline">
 					<h1>Help People</h1>
 					<h3>Where there is charity and wisdom, there is neither fear nor ignorance.</h3>
 				</div>
 				<div class="section">
-					<h2>Organizing seminars, impact studies, workshops, research study and awareness campaigns on educational policies, statistics, health, legal issues, women and children developmental activities.</h2>
+					<h2>Organizing seminars, impact studies, workshops, research studies and awareness campaigns on educational opportunities, statistics, health, legal issues, women and children developmental activities.</h2>
 
 					<p>
 						We Encourage sustainable agricultural development and organic farming.Establishing unity, integrity and communal harmony.Encouraging adult education among rural masses and slum dwellers.Working for people with disability.
@@ -86,7 +86,7 @@
 		<div class="body">
 			<div>
 				<div class="figure">
-					<a href="gallery.php"><img src="https://pbs.twimg.com/media/DL3WyRYXcAAH00f.jpg" alt="Image"></a>
+					<a href="gallery.php"><img src="./Pictures/hold_hands.jpg" alt="Image"></a>
 					<h2><a href="gallery.php">gallery</a></h2>
 				</div>
 				<div class="news">
@@ -96,7 +96,7 @@
 							<span class="date">Feb 06, 2019</span>
 							<h3><a href="news.php">New Children Foundation has joined us </a></h3>
 							<p>
-								More and more foundations are  joining  us ."Hope" is a new foundation which is now going to get connect with us.
+								More and more foundations are  joining  us ."Hope" is a new foundation which is now going to get connected with us.
 							</p>
 						</li>
 						<li>
@@ -111,10 +111,10 @@
 				</div>
 				<div class="help">
 					<h2>How To Help</h2>
-					<a href="login.php"><img src="https://c.tadst.com/gfx/750w/charity-day.jpg" alt="Image"></a>
+					<a href="login.php"><img src="./Pictures/volunteer.jpg" alt="Image"></a>
 					<h3><a href="login.php">In one single step</a></h3>
 					<p>
-					 We know the needs of people who are poor and disabled.  Start helping people with your abilities.
+					 We know the needs of people who are poor and disabled. Join us now.
 					</p>
 					<span class="link"><a href="login.php">Get Involved</a></span>
 				</div>

@@ -30,7 +30,7 @@
 		}
 	}
 	else{
-		header("location:./errors/illigle_operation.php");
+		header("location:./errors/illegal_operation.php");
 	}
 	mysqli_close($con);
 ?>

@@ -11,7 +11,7 @@ include("./includes/connection.php");
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<style type="text/css">
 	body{
-		background-image: url('http://www.wearethecity.com/wp-content/uploads/2013/12/Fotolia_35984804_Subscription_XL.jpg');
+		background-image: url('./Pictures/background.jpg');
 		background-repeat: repeat;
 		opacity:0.90;
 	}
@@ -34,7 +34,7 @@ include("./includes/connection.php");
 	<div id="header">
 		<div>
 			<div class="topnav">
-			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="https://www.vollie.com.au/uploads/organisation_logos/6098/SF-Logo_Use-on-Light-Backgrounds.png" alt="logo" style="padding-top:15px;"></a>
+			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="./Pictures/logo.png" alt="logo" style="padding-top:15px;"></a>
 			<h1 id="titl">CHARIS</h1>
 		</div><ul>
 				<li><a href="index.php">Home</a></li>
@@ -60,7 +60,7 @@ include("./includes/connection.php");
 			</ul>
 		</div>
 	</div>
-	<div id="body">
+	<div id="body" style="height:1125px;">
 		<div id="gallery" style="padding-top:50px;">
 			<div class="header" style="height:900px;overflow:scroll;">
 
@@ -74,7 +74,7 @@ include("./includes/connection.php");
 							if($count<=8){
 							?>
 							<a>
-								<div style="height:200px">
+								<div style="height:200px;width:100px;padding-left:500px;">
 
 									<img src="<?php echo $rs['image']; ?>"  class="imgstyle" height="200px" width="500px" style="border:none;padding-left:1500px;" />
 

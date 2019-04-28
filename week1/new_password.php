@@ -7,7 +7,7 @@
 	<meta charset="UTF-8">
 	<title>New Password - Helping Hands</title>
 
-	<link rel="shortcut icon" type="image/x-icon" href="images/logo_icon.png" />
+
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="stylesheet" href="./css/style_form.css">
 	<script type="text/javascript">
@@ -24,7 +24,7 @@
 	</script>
 	<style type="text/css">
 	body{
-		background-image: url('http://www.wearethecity.com/wp-content/uploads/2013/12/Fotolia_35984804_Subscription_XL.jpg');
+		background-image: url('./Pictures/background.jpg');
 		background-repeat: repeat;
 		opacity:0.90;
 	}
@@ -46,7 +46,7 @@
 	<div id="header">
 		<div>
 			<div class="topnav">
-			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="https://www.vollie.com.au/uploads/organisation_logos/6098/SF-Logo_Use-on-Light-Backgrounds.png" alt="logo" style="padding-top:15px;"></a>
+			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="./Pictures/logo.png" alt="logo" style="padding-top:15px;"></a>
 			<h1 id="titl">CHARIS</h1>
 		</div>
 		<ul>
@@ -93,9 +93,9 @@
 				<h3>New Password</h3>
 				<form action="./password_update.php" method="post" onsubmit="return checkPassword()" class="user">
 					<input type="hidden" name="id" value="<?php echo $id; ?>">
-					<label>Password[10-digits]</label>
+					<label>Password[8-digits]</label>
 					<input type="password" name="password" id="password" pattern=".{8,}">
-					<label>Confirm Password[10-digits]</label>
+					<label>Confirm Password[8-digits]</label>
 					<input type="password" name="password" id="password1" pattern=".{8,}">
 					<input type="submit" value="Update">
 				</form>

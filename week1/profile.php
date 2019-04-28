@@ -11,7 +11,7 @@ include("./includes/connection.php");
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<style type="text/css">
 	body{
-		background-image: url('http://www.wearethecity.com/wp-content/uploads/2013/12/Fotolia_35984804_Subscription_XL.jpg');
+		background-image: url('./Pictures/background.jpg');
 		background-repeat: repeat;
 		opacity:0.90;
 	}
@@ -34,7 +34,7 @@ include("./includes/connection.php");
 	<div id="header">
 		<div>
 			<div class="topnav">
-			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="https://www.vollie.com.au/uploads/organisation_logos/6098/SF-Logo_Use-on-Light-Backgrounds.png" alt="logo" style="padding-top:15px;"/></a>
+			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="./Pictures/logo.png" alt="logo" style="padding-top:15px;"/></a>
 			<h1 id="titl">CHARIS</h1>
 		</div>
 			<ul>
@@ -74,13 +74,13 @@ include("./includes/connection.php");
 
       	<img src="<?php echo $rs['profile_pic']; ?>" height="300px" width="400px" style="padding-left:600px;position:absolute;">
       <br/>
-			<h2><label style="color:orange">FIRST   NAME     :</label><?php echo $rs['first_name'] ?></h2></br>
-			<h2><label style="color:orange">MIDDLENAME    :</label><?php echo $rs['middle_name'] ?></h2></br>
-			<h2><label style="color:orange">LASTNAME      :</label><?php echo $rs['last_name'] ?></h2></br>
-			<h2><label style="color:orange">DATE OF BIRTH :</label><?php echo $rs['date_of_birth'] ?></h2></br>
-			<h2><label style="color:orange">ADDRESS       :</label><?php echo $rs['address'] ?></h2></br>
-			<h2><label style="color:orange">MOBILE        :</label><?php echo $rs['mobile'] ?></h2></br>
-			<h2><label style="color:orange">E-MAIL          :</label><?php echo $rs['email'] ?></h2></br>
+			<h2><label style="color:Grey">FIRST   NAME     :</label><?php echo $rs['first_name'] ?></h2></br>
+			<h2><label style="color:Grey">MIDDLENAME    :</label><?php echo $rs['middle_name'] ?></h2></br>
+			<h2><label style="color:Grey">LASTNAME      :</label><?php echo $rs['last_name'] ?></h2></br>
+			<h2><label style="color:Grey">DATE OF BIRTH :</label><?php echo $rs['date_of_birth'] ?></h2></br>
+			<h2><label style="color:Grey">ADDRESS       :</label><?php echo $rs['address'] ?></h2></br>
+			<h2><label style="color:Grey">MOBILE        :</label><?php echo $rs['mobile'] ?></h2></br>
+			<h2><label style="color:Grey">E-MAIL          :</label><?php echo $rs['email'] ?></h2></br>
 			</div>
 			<div class="footer">
 				<p>

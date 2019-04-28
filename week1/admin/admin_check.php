@@ -3,7 +3,7 @@
 	if(isset($_POST["admin"]) && isset($_POST["password"])){
 		$admin = $_POST["admin"];
 		$password = $_POST["password"];
-		
+
 		$sql = "SELECT * FROM admin WHERE admin_Id='".$admin."' and password='".$password."'";
 		$result = mysqli_query($con,$sql);
 		if(mysqli_num_rows($result) == 1){
@@ -23,7 +23,7 @@
 		}
 	}
 	else{
-		header("location:../errors/illigle_operation.html");
+		header("location:../errors/illegal_operation.html");
 	}
 	mysqli_close($con);
 ?>

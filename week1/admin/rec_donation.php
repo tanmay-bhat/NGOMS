@@ -5,10 +5,10 @@ include("./includes/connection.php");
 	$sql = "SELECT * FROM categories WHERE category_id='".$_GET['cat']."'";
 	$result = mysqli_query($con,$sql);
 	$rs = mysqli_fetch_array($result);
-	$avl = $rs['avaliable'];
+	$avl = $rs['available'];
 	if($avl >= 0)
 	{
-	$sql = "UPDATE categories SET avaliable=".$avl." WHERE category_id='".$_GET['cat']."'";
+	$sql = "UPDATE categories SET available=".$avl." WHERE category_id='".$_GET['cat']."'";
   }
 	else{
 		?>

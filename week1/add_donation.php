@@ -20,6 +20,11 @@
 		});
 	</script>
 	<style type="text/css">
+	body{
+		background-image: url('./Pictures/background.jpg');
+		background-repeat: repeat;
+		opacity:0.90;
+	}
 	.topnav{
 	  border-bottom: 1px solid seashell;
 	  display: flex;
@@ -34,11 +39,11 @@
 	}
 	</style>
 </head>
-<body>
+<body style="margin-left:30px">
 	<div id="header">
 		<div>
 			<div class="topnav">
-			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="https://www.vollie.com.au/uploads/organisation_logos/6098/SF-Logo_Use-on-Light-Backgrounds.png" alt="logo" style="padding-top:15px;"></a>
+			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="./Pictures/logo.png" alt="logo" style="padding-top:15px;"></a>
 			<h1 id="titl">CHARIS</h1>
 		</div>
 		<ul>
@@ -96,7 +101,7 @@
 				<label>Items</label>
 				<input type="number" name="items" required>
 				<label>description</label>
-				<textarea name="donor_discription" rows="5" required>
+				<textarea name="donor_description" rows="5" required>
 				</textarea>
 				<label>How we collect your donation? </label>
 				<div class="pickup">

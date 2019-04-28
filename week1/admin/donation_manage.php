@@ -17,7 +17,7 @@
 	<script src="./js/jquery.min.js"></script>
 	<style type="text/css">
 	body{
-		background-image: url('http://www.wearethecity.com/wp-content/uploads/2013/12/Fotolia_35984804_Subscription_XL.jpg');
+		background-image: url('../Pictures/background.jpg');
 		background-repeat: repeat;
 		opacity:0.90;
 	}
@@ -39,7 +39,7 @@
 	<div id="header">
 		<div>
 			<div class="topnav">
-			<a href="index.php" id="logo"><img src="https://t3.ftcdn.net/jpg/01/96/73/32/160_F_196733298_kLoT45gDYllKBcJbTiUp1WZIx56XVtz5.jpg" alt="logo"></a>
+			<a href="index.php" id="logo"><img  height="110px" width="140px" src="../Pictures/logo.png" alt="logo" style="padding-top:15px;"></a>
 			<h1 id="titl">CHARIS</h1>
 		</div><ul>
 				<li><a href="users.php">users</a></li>
@@ -65,10 +65,10 @@
 				$sql = "SELECT * FROM categories WHERE category_id='".$_GET['cat']."'";
 				$result = mysqli_query($con,$sql);
 				$rs = mysqli_fetch_array($result);
-				$avl = $rs['avaliable'];
+				$avl = $rs['available'];
 				if( $avl > 0)
 				{
-					echo "<h4 style='text-align:right;'>".$rs['avaliable']."-".$cat." Available</h4>";
+					echo "<h4 style='text-align:right;'>".$rs['available']."-".$cat." Available</h4>";
 				}else
 				{
 					echo "<h4 style='text-align:right;'> ".$cat." not Available</h4>";
@@ -83,6 +83,7 @@
 					<div style="height:300px; width:350px; margin:20px; box-shadow:0 0 1px;">
 						<h2><?php echo $rs['donar_name'] ?></h2>
 						<h4><?php echo $rs['donar_email'] ?></h4>
+						<h4><?php echo $rs['description'] ?></h4>
 
 						<p><?php echo $cat; ?></p>
 						<form action="rec_donation.php" class="user">

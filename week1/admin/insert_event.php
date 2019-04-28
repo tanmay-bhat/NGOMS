@@ -34,11 +34,11 @@
 	$sql = "INSERT INTO event(event_id,event_name,event_description,date,time,address,city_id,duration,image) VALUES('".$id."','".$name."','".$description."','".$date."','".$time."','".$address."',".$city.",'".$duration."','".$img."')";
 	$result = mysqli_query($con,$sql);
 	if($result==1){
-	
+
 		?>
 		<script>
 			window.location="events.php";
-			alert("Successfully added to the news");
+			alert("Successfully added to the events");
 		</script>
 		<?php
 	}

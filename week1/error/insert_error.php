@@ -1,1 +1,1 @@
-<h1 align="center">INSERT ERROR</h1><h4>Record not inserted...!!</h4><hr>
+<h1 align="center">Uh-Oh</h1><h4>UserName or Gmail already exists...!!</h4><hr>

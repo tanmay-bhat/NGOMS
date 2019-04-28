@@ -8,13 +8,12 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link rel="shortcut icon" type="image/x-icon" href="https://t3.ftcdn.net/jpg/01/96/73/32/160_F_196733298_kLoT45gDYllKBcJbTiUp1WZIx56XVtz5.jpg" />
 	<title>Admin Login - Charis</title>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="stylesheet" type="text/css" href="./css/style_form.css">
 	<style type="text/css">
 	body{
-		background-image: url('http://www.wearethecity.com/wp-content/uploads/2013/12/Fotolia_35984804_Subscription_XL.jpg');
+		background-image: url('../Pictures/background.jpg');
 		background-repeat: repeat;
 		opacity:0.80;
 	}
@@ -35,7 +34,7 @@
 <body>
 	<div id="header">
 		<div class="topnav">
-		<a href="index.php"   id="logo"><img  height="110px" width="140px" src="https://www.vollie.com.au/uploads/organisation_logos/6098/SF-Logo_Use-on-Light-Backgrounds.png" alt="logo" style="padding-top:15px;"></a>
+		<a href="index.php"   id="logo"><img  height="110px" width="140px" src="../Pictures/logo.png" alt="logo" style="padding-top:15px;"></a>
 		<h1 id="titl">CHARIS</h1>
 
 
@@ -43,7 +42,7 @@
 	</div>
 	<div id="body">
 		<div>
-			<a href="../index.php"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/GreenButton_LeftArrow.svg/1024px-GreenButton_LeftArrow.svg.png" alt="admin" height="70px" width="100px"/></a>
+			<a href="../index.php"><img src="../Pictures/back_to_userpage.png" alt="admin" height="70px" width="100px"/></a>
 			<div class="login_div">
 				<h3>Login</h3>
 				<form action="./admin_check.php" method="post" class="user">

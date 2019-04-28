@@ -17,32 +17,34 @@
 	$sql = "SELECT * FROM categories WHERE category_id='".$_GET['cat']."'";
 	$result = mysqli_query($con,$sql);
 	$rs = mysqli_fetch_array($result);
-	$avl = $rs['avaliable'];
+	$avl = $rs['available'];
 	if($_GET['donations'] > 0){
 	$avl = $avl - $_GET['donations'];
   }else{
 		?>
 		<script>
 			window.location="donation_manage.php?cat=".$_GET['cat'];
-			alert("not in stocm,ck.!.,kl!");
+			alert("not in stock");
 		</script>
 		<?php
    }
    if($avl >= 0)
    {
-	$sql = "UPDATE categories SET avaliable=".$avl." WHERE category_id='".$_GET['cat']."'";
+	$sql = "UPDATE categories SET available=".$avl." WHERE category_id='".$_GET['cat']."'";
 	?>
 	<script>
-		window.location="home.php?";
+
 		alert("Successfully sent to the ngo.!!");
+			window.location="home.php?";
 	</script>
 	<?php
   }
 	else{
 		?>
 		<script>
-			window.location="donation_manage.php?cat=".$_GET['cat'];
-			alert("not in stock.!.,kl!");
+
+			alert("not in stock");
+				window.location="donation_manage.php?cat=".$_GET['cat'];
 		</script>
 		<?php
 	}
@@ -50,8 +52,9 @@
 
 		?>
 		<script>
+		alert("not in stock.!!");
 			window.location="home.php?";
-			alert("not in stock.!!");
+
 		</script>
 		<?php
 	}

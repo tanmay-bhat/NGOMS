@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link rel="shortcut icon" type="image/x-icon" href="https://t3.ftcdn.net/jpg/01/96/73/32/160_F_196733298_kLoT45gDYllKBcJbTiUp1WZIx56XVtz5.jpg" />
+
 	<title>Admin Panel - Charis</title>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="stylesheet" type="text/css" href="./css/style_form.css">
@@ -24,7 +24,7 @@
 		font-family: Tahoma;
 	}
 	body{
-		background-image: url('http://adeleandthepenguin.com/wp-content/uploads/2015/02/dreamstime_m_36300760.jpg');
+		background-image: url('../Pictures/background.jpg');
 		background-repeat: repeat;
 		opacity:0.93;
 	}
@@ -34,7 +34,7 @@
 	<div id="header">
 		<div>
 			<div class="topnav">
-			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="https://www.vollie.com.au/uploads/organisation_logos/6098/SF-Logo_Use-on-Light-Backgrounds.png" alt="logo" style="padding-top:15px;"></a>
+			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="../Pictures/logo.png" alt="logo" style="padding-top:15px;"></a>
 			<h1 id="titl">CHARIS</h1>
 		</div><ul>
 				<li  class="current"><a href="users.php">users</a></li>
@@ -69,8 +69,8 @@
    }
   } ?>
   <div class="donation_div acontainer">
-  <h3>Users</h3><hr>
-	<div style="padding-right:1200px;">
+  <h3 style="padding-left:150px;">Users</h3>
+	<div style="padding-right:1300px;margin-left:150px;">
   <table border="1">
     <tr>
       <th>Number</th>

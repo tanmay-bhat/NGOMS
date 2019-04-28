@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<title>Get Involved - Charis</title>
 
-	<link rel="shortcut icon" type="image/x-icon" href="images/logo_icon.png" />
+
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="stylesheet" type="text/css" href="./css/style_form.css">
 	<script type="text/javascript">
@@ -39,7 +39,7 @@
 
 	<style type="text/css">
 	body{
-		background-image: url('http://www.wearethecity.com/wp-content/uploads/2013/12/Fotolia_35984804_Subscription_XL.jpg');
+		background-image: url('./Pictures/background.jpg');
 		background-repeat: repeat;
 		opacity:0.90;
 	}
@@ -61,10 +61,12 @@
 	<div id="header">
 		<div>
 			<div class="topnav">
-			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="https://www.vollie.com.au/uploads/organisation_logos/6098/SF-Logo_Use-on-Light-Backgrounds.png" alt="logo" style="padding-top:15px;"></a>
+			<a href="index.php"   id="logo"><img  height="110px" width="140px" src="./Pictures/logo.png" alt="logo" style="padding-top:15px;"></a>
 			<h1 id="titl">CHARIS</h1>
 		</div>
+			<a href="./admin/index.php"><img src="./Pictures/admin.png" alt="admin" height="70px" width="100px" style="padding-top:-1px;padding-right:45px"/></a>
 		<ul>
+
 				<li><a href="index.php">Home</a></li>
 				<li><a href="about.php">About</a></li>
 				<li><a href="gallery.php">Gallery</a></li>
@@ -85,6 +87,7 @@
 					}
 				?>
 				</li>
+
 			</ul>
 		</div>
 	</div>
@@ -107,9 +110,9 @@
 						<label>First Name</label>
 						<input type="text" name="fname" required>
 						<label>Middle Name</label>
-						<input type="text" name="mname" required>
+						<input type="text" name="mname" >
 						<label>Last Name</label>
-						<input type="text" name="lname" required>
+						<input type="text" name="lname" >
 						<label>Gender</label>
 						 <input type="radio" name="gender[]" value="male"> Male<br>
              <input type="radio" name="gender[]" value="female"> Female<br>
