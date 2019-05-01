@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2019 at 02:21 PM
+-- Generation Time: May 01, 2019 at 02:10 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -58,12 +58,12 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`category_id`, `name`, `available`) VALUES
-('CT7hjkb6h8j65gv', 'Toys', 33),
-('CT876hu74t8jhf5', 'Clothes', 15),
-('CT87hjuyhgt6yhg', 'Medicines', 13),
-('CT9783gt43ft5v6', 'Stationaries', 37),
-('CT98kju6yhgfr45', 'Food', 95),
-('CTujh678jh6543g', 'Others', 10000);
+('CT7hjkb6h8j65gv', 'Toys', 23),
+('CT876hu74t8jhf5', 'Clothes', 9),
+('CT87hjuyhgt6yhg', 'Medicines', 9),
+('CT9783gt43ft5v6', 'Stationaries', 23),
+('CT98kju6yhgfr45', 'Food', 50),
+('CTujh678jh6543g', 'Others', 8000);
 
 -- --------------------------------------------------------
 
@@ -1096,6 +1096,20 @@ CREATE TABLE `distributions` (
   `counts` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `distributions`
+--
+
+INSERT INTO `distributions` (`distribution_id`, `ngo_id`, `category_id`, `counts`) VALUES
+('DS5cc8857e84fe9', 'NS5c922d2fc635a', 'CT7hjkb6h8j65gv', 7),
+('DS5cc8858b828e9', 'NS5cc5741d6191b', 'CT7hjkb6h8j65gv', 3),
+('DS5cc8859865a1e', 'NS5c922d2fc635a', 'CT876hu74t8jhf5', 4),
+('DS5cc885a41d47b', 'NS5c922d757b473', 'CT876hu74t8jhf5', 2),
+('DS5cc885b2504d5', 'NS5c922d2fc635a', 'CT87hjuyhgt6yhg', 4),
+('DS5cc885c3b7a38', 'NS5c922d2fc635a', 'CT9783gt43ft5v6', 14),
+('DS5cc885d259b0d', 'NS5c922d2fc635a', 'CT98kju6yhgfr45', 45),
+('DS5cc885de8f1b5', 'NS5c922d2fc635a', 'CTujh678jh6543g', 2000);
+
 -- --------------------------------------------------------
 
 --
@@ -1122,9 +1136,9 @@ CREATE TABLE `donation` (
 --
 
 INSERT INTO `donation` (`donate_id`, `user_id`, `donar_name`, `donar_email`, `city_id`, `address`, `category_id`, `date`, `description`, `pickup`, `receive_date`, `items`) VALUES
-('DN5cc591d642a54', NULL, 'Anjali', 'anj@gmail.com', 427, '				Bagalkot', 'CT7hjkb6h8j65gv', '2019-04-28', '				Set of barbie dolls', 'A', NULL, '9'),
+('DN5cc591d642a54', NULL, 'Anjali', 'anj@gmail.com', 427, '				Bagalkot', 'CT7hjkb6h8j65gv', '2019-04-28', '				Set of barbie dolls', 'A', '2019-04-30', '9'),
 ('DN5cc59209882bc', NULL, 'Pinky', 'pinky@gmail.com', 274, '		Delhi		', 'CT7hjkb6h8j65gv', '2019-04-28', '		Set of 2		', 'M', NULL, '6'),
-('DN5cc5928fc3372', NULL, 'Pinky', 'pinky@gmail.com', 485, '				Uttara kannada', 'CT876hu74t8jhf5', '2019-04-28', '		Jeans 		', 'M', NULL, '8'),
+('DN5cc5928fc3372', NULL, 'Pinky', 'pinky@gmail.com', 485, '				Uttara kannada', 'CT876hu74t8jhf5', '2019-04-28', '		Jeans 		', 'M', '2019-04-30', '8'),
 ('DN5cc592c8d83d0', NULL, 'Mahati', 'Mahati@gmail.com', 183, '				Kolkatta', 'CT876hu74t8jhf5', '2019-04-28', '				Shirts', 'M', NULL, '7'),
 ('DN5cc592fe47f4d', NULL, 'Jai', 'jai@gmail.com', 524, '			Ashoknagar	', 'CT87hjuyhgt6yhg', '2019-04-28', '		Insulin		', 'M', NULL, '5'),
 ('DN5cc5932b46985', NULL, 'kiran', 'kiran@gmail.com', 404, '		Adityapur		', 'CT87hjuyhgt6yhg', '2019-04-28', '				Mosquito repellants', 'A', NULL, '8'),

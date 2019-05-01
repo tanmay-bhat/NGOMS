@@ -26,7 +26,7 @@
 	</script>
 	<style type="text/css">
 	body{
-		background-image: url('./Pictures/background.jpg');
+		background-image: url('../Pictures/background.jpg');
 		background-repeat: repeat;
 		opacity:0.90;
 	}
